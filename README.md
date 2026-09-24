@@ -6,7 +6,7 @@ Portafolio editorial e interactivo de Luis Sabrera. La identidad se mantiene: bl
 
 La base activa es **V1.1 RC13 · Live Deployment QA**. Conserva íntegramente RC12 y cierra la metadata de producción para GitHub Pages sin modificar UI, motion ni responsive.
 
-**Sitio publicado:** https://apuexe.github.io/Portafolio/
+**Sitio publicado:** LIVE_URL = https://sabreraluis.github.io/Portafolio/
 
 ## V1.1 — SIGNAL → CLARITY
 
