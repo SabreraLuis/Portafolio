@@ -39,3 +39,22 @@ Abrir `index.html` en el navegador o servir la carpeta con `python -m http.serve
 ## Referencia investigada
 
 Entrevista oficial del equipo de color y diseño de TYBW: https://bleach-anime.com/special/interview/08.html
+
+
+## V3 — Kinetic Editorial Motion
+
+Fecha: 2026-10-09. Rediseño incremental sobre INK / IMPACT V2.
+
+### Dirección visual
+Inspiración conceptual contrastada con el sitio oficial de Bleach TYBW: https://bleach-anime.com/keyword/ y entrevista con dirección de color: https://bleach-anime.com/special/interview/08.html. Combinación original de masas negras, titulares recortados, retículas editoriales, contraste carmín/negro/papel, y alternancia de pausas visuales y composición tipográfica. Sin copiar logos, personajes, animaciones ni láminas originales.
+
+### Cambios
+- `motion.css`: gramática de animación, cubierta cinética, trama editorial, transiciones de capítulos, línea de lectura, tipografía intermedia PENSAR/HACER/MEDIR, señalización HUD y microinteracciones.
+- `motion.js`: animaciones de entrada con Web Animations API y IntersectionObserver, contador de métricas que conserva sus valores accesibles, respuesta fina al puntero limitada a ±4px, HUD de capítulo activo, desactivación manual de movimiento por sesión, y botón copiar correo con fallback.
+- `index.html`: semántica de nuevas secciones editoriales, botones y ayudas accesibles.
+- La información factual y las experiencias del CV permanecen sin cambios, y el portafolio principal en la raíz no se modifica.
+- Sin dependencias JS externas, sin scroll hijacking ni animaciones infinitas.
+- Reducción de movimiento a nivel OS (`prefers-reduced-motion`), control manual de movimiento y tratamiento de impresión.
+
+### QA local
+Inspección automatizada en Chromium a 320, 390, 768, 1440 y 1920 px (desktop, móvil y tablet), con y sin reducción de movimiento. Verificados los enlaces internos, H1 único, ausencia de errores JavaScript, ausencia de desplazamiento horizontal, menú móvil (abrir/cerrar/Escape), control de movimiento ON/OFF y presencia de 4 experiencias. Se observaron elementos decorativos desbordados dentro de sus contenedores con `overflow:hidden` intencionalmente, sin aumentar el scroll horizontal.
