@@ -16,12 +16,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./motion.css">
   <script src="./script.js" defer></script>
+  <script src="./motion.js" defer></script>
   <title>Luis Sabrera — Portfolio / Marketing & Comunicación</title>
 </head>
 <body>
   <a class="skip" href="#contenido">Saltar al contenido</a>
   <div class="progress" aria-hidden="true"><span id="progress"></span></div>
+  <div class="chapter-hud" aria-hidden="true"><span class="hud-rule"></span><span id="hud-number">00—06</span><span id="hud-title">PORTADA</span></div>
+
   <header class="masthead">
     <a class="brand" href="#inicio" aria-label="Luis Sabrera, inicio"><span class="brand-square">LS<span>.</span></span><span class="brand-label">LUIS SABRERA<br>PORTAFOLIO 2026</span></a>
     <nav class="nav" id="nav" aria-label="Navegación principal">
@@ -30,8 +34,10 @@
       <a href="#especialidades">03 / EXPERTISE</a>
       <a class="nav-link-accent" href="#contacto">CONTACTO <span aria-hidden="true">↗</span></a>
     </nav>
+    <button class="motion-switch mono" id="motion-switch" type="button" aria-pressed="true" aria-label="Desactivar las animaciones"><span class="motion-switch-symbol" aria-hidden="true">◉</span><span id="motion-switch-label">MOVIMIENTO / ON</span></button>
     <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="nav">MENÚ <span aria-hidden="true">＋</span></button>
   </header>
+
   <main id="contenido">
     <section class="hero" id="inicio" aria-labelledby="nombre">
       <div class="hero-body">
@@ -47,14 +53,17 @@
           </div>
           <div class="hero-bottom mono"><span>LIMA, PERÚ / DISPONIBLE PARA CONTACTO</span><span>DESLIZA PARA EXPLORAR ↓</span></div>
         </div>
-        <aside class="hero-art" aria-label="Composición gráfica editorial">
+        <aside class="hero-art" aria-label="Composición gráfica editorial" id="hero-art">
           <div class="art-top mono"><span>LS / ARCHIVE</span><span>N.º 001</span></div>
+          <div class="art-lattice" aria-hidden="true"></div>
           <div class="art-center" aria-hidden="true"><span class="art-overline">SABRERA</span><span class="art-zero">0</span><span class="art-one">1</span><span class="art-diagonal"></span></div>
+          <div class="art-side-code mono" aria-hidden="true">VISUAL INDEX // L.S. ─ 2026</div>
           <div class="art-footer mono"><span>COMUNICACIÓN<br>ESTRATEGIA<br>PRODUCTO</span><span class="art-cross" aria-hidden="true">✳</span></div>
         </aside>
       </div>
       <div class="hero-ribbon mono"><span>ESTRATEGIA COMERCIAL</span><b>×</b><span>PERFORMANCE</span><b>×</b><span>IDENTIDAD DE MARCA</span><b>×</b><span>PRODUCTO DIGITAL</span></div>
     </section>
+
     <section class="intro section-light" id="perfil" aria-labelledby="perfil-titulo">
       <div class="chapter mono"><span>01</span><span>PERFIL / ACERCA DE MÍ</span><span>LS—2026</span></div>
       <div class="intro-grid">
@@ -68,9 +77,17 @@
         </div>
       </div>
     </section>
+
+    <section class="editorial-break" aria-label="Método profesional: pensar, hacer y medir">
+      <div class="break-meta mono"><span>ESTUDIO DE COMUNICACIÓN</span><span>ARCHIVO / 01—02</span></div>
+      <div class="break-lines" aria-hidden="true"><span>PENSAR<span class="break-mark">/</span></span><span>HACER<span class="break-mark">/</span></span><span>MEDIR<span class="break-period">.</span></span></div>
+      <p class="break-caption">DE LA IDEA A LA EJECUCIÓN<br>DE LA EJECUCIÓN AL RESULTADO</p>
+      <span class="break-diagonal" aria-hidden="true"></span>
+    </section>
     <section class="work section-dark" id="trayectoria" aria-labelledby="trabajo-titulo">
       <div class="chapter chapter-white mono"><span>02</span><span>TRAYECTORIA / EXPERIENCIA</span><span>2021 — HOY</span></div>
       <div class="work-head"><h2 id="trabajo-titulo">EXPERIENCIA<span>.</span></h2><p>Cuatro contextos de trabajo.<br>Una perspectiva que conecta comunicación, resultados y producto.</p></div>
+      <div class="work-guide mono"><span>SELECCIÓN DE EXPERIENCIAS / 04</span><span>DESPLAZA PARA EXPLORAR ↘</span></div>
       <div class="roles">
         <article class="role" aria-labelledby="role-amp">
           <div class="role-index mono">/ 01 <span>2026 — ACTUALIDAD</span></div>
@@ -94,14 +111,17 @@
         </article>
       </div>
     </section>
+
+    <div class="transition-band" aria-hidden="true"><span>ESTRATEGIA</span><i>✳</i><span>RESULTADOS</span><i>✳</i><span>ESTRATEGIA</span></div>
     <section class="proof" aria-labelledby="proof-title">
       <div class="proof-intro"><div class="chapter mono"><span>03</span><span>RESULTADOS / EXPERIENCIA REAL</span><span>SELECCIÓN</span></div><h2 id="proof-title">EL TRABAJO<br>DEJA <i>HUELLA.</i></h2></div>
       <div class="proof-metrics">
-        <div class="proof-primary"><span class="mono">20 PROD. / CONVERSIÓN DE LEADS</span><strong>+40<sup>%</sup></strong><p>Incremento al que contribuí desde estrategia de contenidos, campañas y producción audiovisual.</p></div>
-        <div class="proof-secondary"><div><span class="mono">SUNAFIL / ENGAGEMENT</span><strong>+25<sup>%</sup></strong></div><div><span class="mono">SUNAFIL / TIEMPO DE RESPUESTA</span><strong>−15<sup>%</sup></strong></div></div>
+        <div class="proof-primary"><span class="mono">20 PROD. / CONVERSIÓN DE LEADS</span><strong aria-label="Más cuarenta por ciento"><span data-count="40" data-prefix="+">+40</span><sup>%</sup></strong><p>Incremento al que contribuí desde estrategia de contenidos, campañas y producción audiovisual.</p></div>
+        <div class="proof-secondary"><div><span class="mono">SUNAFIL / ENGAGEMENT</span><strong aria-label="Más veinticinco por ciento"><span data-count="25" data-prefix="+">+25</span><sup>%</sup></strong></div><div><span class="mono">SUNAFIL / TIEMPO DE RESPUESTA</span><strong aria-label="Menos quince por ciento"><span data-count="15" data-prefix="−">−15</span><sup>%</sup></strong></div></div>
       </div>
       <p class="proof-foot mono">CIFRAS DECLARADAS EN MI CV; CORRESPONDEN A LAS EXPERIENCIAS INDICADAS.</p>
     </section>
+
     <section class="skills section-light" id="especialidades" aria-labelledby="skills-titulo">
       <div class="chapter mono"><span>04</span><span>ESPECIALIDADES / HERRAMIENTAS</span><span>EN PRÁCTICA</span></div>
       <div class="skills-frame"><div class="skills-lead"><h2 id="skills-titulo">LO QUE<br><span>APORTO.</span></h2><p>No es una colección de logotipos. Son capacidades que utilizo para resolver problemas de comunicación y negocio.</p></div><div class="skill-list">
@@ -110,15 +130,19 @@
         <div class="skill-item"><span class="mono">03 / DISEÑAR</span><div><h3>PRODUCTO &amp; CONTENIDO</h3><p>Figma, Illustrator, Photoshop, Premiere Pro, diseño UX/UI y producción audiovisual.</p></div></div>
       </div></div>
     </section>
+
     <section class="education section-light" id="formacion" aria-labelledby="education-titulo">
       <div class="chapter mono"><span>05</span><span>FORMACIÓN / BASE ACADÉMICA</span><span>CONTINUIDAD</span></div>
       <div class="education-grid"><h2 id="education-titulo">FORMACIÓN<span>—</span></h2><div class="edu-items"><div class="edu-item"><time class="mono">2021</time><div><h3>CIENCIAS DE LA COMUNICACIÓN</h3><p>Bachiller · Universidad Nacional José Faustino Sánchez Carrión</p></div></div><div class="edu-item"><time class="mono">2023</time><div><h3>MARKETING DIGITAL</h3><p>Fundación Telefónica</p></div></div><div class="edu-item"><time class="mono">2023</time><div><h3>DISEÑO GRÁFICO</h3><p>Skill Centro de Capacitaciones</p></div></div><div class="edu-item"><span class="mono">—</span><div><h3>CREACIÓN DE CONTENIDOS DIGITALES</h3><p>Fundación Telefónica</p></div></div></div></div>
     </section>
+
+    <div class="outro-index" aria-hidden="true"><span class="mono">SIGUIENTE CAPÍTULO / 06</span><span>LET'S TALK<span>.</span></span><span class="mono">CONEXIONES QUE IMPORTAN</span></div>
     <section class="contact section-dark" id="contacto" aria-labelledby="contact-titulo">
       <div class="chapter chapter-white mono"><span>06</span><span>CONTACTO / SIGUIENTE PROYECTO</span><span>LIMA — PERÚ</span></div>
-      <div class="contact-frame"><p class="contact-above mono">UNA CONVERSACIÓN PUEDE SER UN BUEN COMIENZO.</p><h2 id="contact-titulo">HABLEMOS<span>.</span></h2><div class="contact-bottom"><a href="mailto:lpumsm@gmail.com?subject=Contacto%20profesional%20-%20Luis%20Sabrera" class="mail-link">ENVIAR CORREO <span aria-hidden="true">↗</span></a><div class="contact-info"><a href="mailto:lpumsm@gmail.com">lpumsm@gmail.com</a><a href="tel:+51929220730">+51 929 220 730</a><button type="button" id="print-btn">GUARDAR CV EN PDF ↓</button></div></div></div>
+      <div class="contact-frame"><p class="contact-above mono">UNA CONVERSACIÓN PUEDE SER UN BUEN COMIENZO.</p><h2 id="contact-titulo">HABLEMOS<span>.</span></h2><div class="contact-bottom"><a href="mailto:lpumsm@gmail.com?subject=Contacto%20profesional%20-%20Luis%20Sabrera" class="mail-link">ENVIAR CORREO <span aria-hidden="true">↗</span></a><div class="contact-info"><a href="mailto:lpumsm@gmail.com">lpumsm@gmail.com</a><a href="tel:+51929220730">+51 929 220 730</a><button type="button" id="copy-email" aria-label="Copiar correo electrónico al portapapeles">COPIAR EMAIL ↗</button><button type="button" id="print-btn">GUARDAR CV EN PDF ↓</button></div></div></div>
     </section>
   </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <footer class="footer mono"><span>LUIS ALBERTO SABRERA ESPINOZA</span><span>DISEÑO EDITORIAL ORIGINAL / 2026</span><a href="#inicio">VOLVER ARRIBA ↑</a></footer>
 </body>
 </html>
