@@ -451,3 +451,8 @@ html.visibility-paused .fx-aurora,html.visibility-paused .fx-scanline,html.visib
   .discipline-card h4{font-size:clamp(37px,4.2vw,55px)}
 }
 @media (min-width:1281px){.discipline-card h4{font-size:clamp(42px,3.85vw,68px)}}
+
+/* Mid-mobile font fallback fix (431–700px); avoid overflow on Chromium 153. */
+@media (min-width:431px) and (max-width:700px){
+  .discipline-card h4{font-size:clamp(44px,9.2vw,62px)}
+}
