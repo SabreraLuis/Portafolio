@@ -9,7 +9,7 @@
   const cases = [...document.querySelectorAll('.case')];
   const button = document.getElementById('replay-intro');
   const reduce = matchMedia('(prefers-reduced-motion: reduce)');
-  const enabled = () => root.classList.contains('motion-enabled') && !root.classList.contains('reading-mode') && !reduce.matches;
+  const enabled = () => root.classList.contains('motion-enabled') && !root.classList.contains('reading-mode');
 
   // The legacy build marked every reveal as "in" on startup: this is intentionally
   // corrected in app.js. This director provides distinctive choreography, not just fades.
@@ -18,13 +18,13 @@
       entry.target.classList.add('is-motion-seen');
       sceneObserver.unobserve(entry.target);
     }
-  }, {threshold:0.11, rootMargin:'0px 0px -35px 0px'}) : null;
+  }, {threshold:0, rootMargin:'0px 0px -90px 0px'}) : null;
   const caseObserver = 'IntersectionObserver' in window ? new IntersectionObserver(entries => {
     for (const entry of entries) if (entry.isIntersecting && enabled()) {
       entry.target.classList.add('is-motion-seen');
       caseObserver.unobserve(entry.target);
     }
-  }, {threshold:0.14, rootMargin:'0px 0px -26px 0px'}) : null;
+  }, {threshold:0, rootMargin:'0px 0px -90px 0px'}) : null;
   const heroObserver = 'IntersectionObserver' in window ? new IntersectionObserver(entries => {
     for (const entry of entries) hero.classList.toggle('is-motion-paused',!entry.isIntersecting);
   }, {threshold:0}) : null;
@@ -35,11 +35,13 @@
   let replayAnimations=[];
   function cancelReplay() { replayAnimations.forEach(animation=>animation.cancel()); replayAnimations=[]; }
   function sync() {
+    const status = document.getElementById('motion-state');
+    if (status) status.textContent = enabled() ? 'FX EN MOVIMIENTO' : (reduce.matches ? 'EFECTOS PAUSADOS · PULSA REPRODUCIR' : 'FX PAUSADOS · PULSA REPRODUCIR');
     if (!enabled()) {
       cancelReplay();
       // Never conceal content, don't run intro with reduced-motion setting.
-      button.disabled = true;
-      button.title = 'Activa Movimiento en VISTA y desactiva movimiento reducido del dispositivo si corresponde';
+      button.disabled = false;
+      button.title = 'Reproducir secuencia; activará el movimiento solo si lo solicitas';
     } else {
       button.disabled = false;
       button.title = 'Repetir la secuencia de entrada';
@@ -57,6 +59,10 @@
   if(reduce.addEventListener)reduce.addEventListener('change',sync);
   sync();
   button.addEventListener('click',() => {
+    if (!enabled()) {
+      if (root.classList.contains('reading-mode')) document.getElementById('reading-toggle')?.click();
+      if (!enabled()) document.getElementById('motion-toggle')?.click();
+    }
     if (!enabled() || typeof Element.prototype.animate !== 'function') return;
     cancelReplay();
     const sequence=[
