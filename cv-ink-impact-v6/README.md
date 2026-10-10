@@ -38,3 +38,7 @@ Contact information is published because it was explicitly shared in the user's 
 ## Preservation
 
 Lives in a completely separate `cv-ink-impact-v6` directory on the existing `SabreraLuis/Portafolio` repository. Previous editions and main portfolio remain unchanged. To review this candidate, use the URL above. Do not point the main portfolio's entry page to this edition before user acceptance.
+
+## Printed CV QA
+
+The browser's print dialog expands all professional disclosures for printing, then restores their original state afterwards. Local Chromium PDF QA verified a two-page A4 CV with the detailed duties, contact information and all four employers. The PDF uses system-font fallbacks in this offline environment; browser-hosted fonts may differ subtly.
