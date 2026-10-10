@@ -1,0 +1,30 @@
+{
+  "version": "7.6.0",
+  "title": "CRITERIO — Living Systems",
+  "release_status": "candidate_local_qa_passed_pending_github_deploy",
+  "source_baseline": "criterio-v7-5",
+  "source_sha_not_yet_collected": true,
+  "checks": {
+    "living_fx": true,
+    "responsive_width_count": 9,
+    "javascript_errors": 0,
+    "horizontal_overflow_max_px": 0,
+    "case_graphics": 4,
+    "metric_reveals": 3,
+    "perceptible_motion_at_390": true,
+    "perceptible_motion_at_1440": true,
+    "pause_resume": true,
+    "reduced_motion_default": true,
+    "reduced_motion_opt_in": true,
+    "pointer_response": true,
+    "resource_budget_pass": true
+  },
+  "first_party_bytes": 164173,
+  "limitations": [
+    "Browser screenshot/local QA uses fallback fonts and inline assets due browser navigation restrictions",
+    "Not tested on physical Android/iOS Safari",
+    "Public Pages CDNs / real LCP, INP, CLS remain unmeasured",
+    "Data claims are from user-provided CV and have not been independently audited"
+  ],
+  "rollback": "https://sabreraluis.github.io/Portafolio/criterio-v7-5/"
+}
