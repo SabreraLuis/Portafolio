@@ -38,11 +38,13 @@
   const navAnchors = [...menu.querySelectorAll('a[href^="#"]')];
   let motionPref = 'on';
   let readingPref = 'off';
+  let motionOptIn = false;
   try {
     motionPref = sessionStorage.getItem('ink-impact-v6-motion') ?? 'on';
     readingPref = sessionStorage.getItem('ink-impact-v6-reading') ?? 'off';
+    motionOptIn = sessionStorage.getItem('ink-impact-v6-motion-opt-in') === 'yes';
   } catch (_) { /* session storage may be unavailable */ }
-  const activeMotion = () => motionPref === 'on' && !reduce.matches;
+  const activeMotion = () => motionPref === 'on' && (!reduce.matches || motionOptIn);
   const announce = (message) => { announcer.textContent = message; };
   const savePref = (key, value) => { try { sessionStorage.setItem(key, value); } catch (_) {} };
   const closeMenu = () => {
@@ -70,8 +72,10 @@
     const moving = activeMotion();
     root.classList.toggle('motion-disabled', !moving);
     root.classList.toggle('motion-enabled', moving);
-    motionButton.textContent = reduce.matches ? 'MOVIMIENTO: SISTEMA' : (moving ? 'MOVIMIENTO: ON' : 'MOVIMIENTO: OFF');
-    motionButton.disabled = reduce.matches;
+    root.classList.toggle('motion-opt-in', motionOptIn);
+    motionButton.textContent = reduce.matches && !motionOptIn ? 'MOVIMIENTO: PAUSADO POR SISTEMA' : (moving ? 'MOVIMIENTO: ON' : 'MOVIMIENTO: OFF');
+    motionButton.disabled = false;
+    motionButton.title = reduce.matches && !motionOptIn ? 'Activar animaciones voluntariamente aunque el dispositivo solicite reducirlas' : 'Cambiar movimiento';
     motionButton.setAttribute('aria-pressed', String(moving));
     motionButton.setAttribute('aria-label', moving ? 'Desactivar efectos de movimiento' : 'Activar efectos de movimiento');
     if (revealObserver) revealObserver.disconnect();
@@ -96,8 +100,8 @@
     window.setTimeout(() => { allReveals.forEach(el => el.classList.add('is-in')); revealObserver?.disconnect(); }, 13000);
   }
   motionButton.addEventListener('click', () => {
-    if (reduce.matches) return;
-    motionPref = motionPref === 'on' ? 'off' : 'on';
+    if (reduce.matches && !motionOptIn) { motionOptIn = true; motionPref = 'on'; savePref('ink-impact-v6-motion-opt-in', 'yes'); }
+    else { motionPref = motionPref === 'on' ? 'off' : 'on'; }
     savePref('ink-impact-v6-motion', motionPref);
     syncMotion();
     announce(activeMotion() ? 'Movimiento activado' : 'Movimiento desactivado');
