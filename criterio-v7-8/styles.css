@@ -439,3 +439,6 @@ html.visibility-paused .fx-aurora,html.visibility-paused .fx-scanline,html.visib
 .discipline-card p{color:#34302d}
 .discipline-card:hover p,.discipline-card:focus-visible p{color:#ece5db}
 .development-perspective{border-color:#8f8980}
+
+/* WCAG AA for dark-background micro-labels: 7.64:1 on #101113. */
+.discipline-heading .mono,.development-perspective .mono{color:#ff7e75}
