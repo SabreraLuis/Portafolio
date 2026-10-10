@@ -1,0 +1,26 @@
+/* INK / IMPACT VI.2.2 | Kinetic visibility and explicit opt-in, additive safety layer. */
+.motion-state{display:inline-flex;align-items:center;gap:7px;color:var(--scarlet-strong);font:600 9px/1.3 var(--mono);white-space:normal;max-width:230px;letter-spacing:.015em}
+.motion-state::before{content:"";display:inline-block;width:8px;height:8px;flex:none;border-radius:50%;background:currentColor}
+html.motion-enabled .motion-state::before{animation:motion-pulse 1.8s ease-in-out infinite}
+@keyframes motion-pulse{50%{opacity:.25;transform:scale(.55)}}
+html.motion-enabled:not(.reading-mode) .hero .ticker-track{animation:im-marquee 6.5s linear infinite!important}
+html.motion-enabled:not(.reading-mode) .hero .poster-ring{animation:motion-ring-active 3.6s ease-in-out infinite alternate!important}
+html.motion-enabled:not(.reading-mode) .hero .poster-monogram{animation:motion-monogram-active 3.2s ease-in-out infinite alternate!important}
+html.motion-enabled:not(.reading-mode) .hero .poster-cut{animation:motion-slice-active 4.6s ease-in-out infinite alternate!important}
+html.motion-enabled:not(.reading-mode) .hero .poster-star{animation:motion-star-active 2.8s ease-in-out infinite alternate!important}
+html.motion-enabled:not(.reading-mode) .hero.is-motion-paused .ticker-track,html.motion-enabled:not(.reading-mode) .hero.is-motion-paused .poster-ring,html.motion-enabled:not(.reading-mode) .hero.is-motion-paused .poster-monogram,html.motion-enabled:not(.reading-mode) .hero.is-motion-paused .poster-cut,html.motion-enabled:not(.reading-mode) .hero.is-motion-paused .poster-star{animation-play-state:paused!important}
+@keyframes motion-ring-active{from{transform:rotate(-22deg) translate3d(-16px,9px,0) scale(.93)}to{transform:rotate(21deg) translate3d(24px,-15px,0) scale(1.07)}}
+@keyframes motion-monogram-active{from{transform:translate3d(-19px,7px,0) scaleX(.86)}to{transform:translate3d(22px,-15px,0) scaleX(.97)}}
+@keyframes motion-slice-active{from{transform:translate3d(-12%,0,0) rotate(-26deg)}to{transform:translate3d(12%,0,0) rotate(-26deg)}}
+@keyframes motion-star-active{from{transform:rotate(-24deg) scale(.86)}to{transform:rotate(28deg) scale(1.21)}}
+/* Opt-in is an explicit user choice: default reduced-motion behavior remains OFF. */
+@media(prefers-reduced-motion:reduce){
+ html.motion-opt-in.motion-enabled:not(.reading-mode) .hero .ticker-track{animation:im-marquee 6.5s linear infinite!important}
+ html.motion-opt-in.motion-enabled:not(.reading-mode) .hero .poster-ring{animation:motion-ring-active 3.6s ease-in-out infinite alternate!important}
+ html.motion-opt-in.motion-enabled:not(.reading-mode) .hero .poster-monogram{animation:motion-monogram-active 3.2s ease-in-out infinite alternate!important}
+ html.motion-opt-in.motion-enabled:not(.reading-mode) .hero .poster-cut{animation:motion-slice-active 4.6s ease-in-out infinite alternate!important}
+ html.motion-opt-in.motion-enabled:not(.reading-mode) .hero .poster-star{animation:motion-star-active 2.8s ease-in-out infinite alternate!important}
+}
+html.motion-disabled .motion-state::before{animation:none!important;opacity:.45!important}
+@media(max-width:650px){.motion-state{width:100%;font-size:9px;max-width:none}.hero-actions{align-items:center}.replay-intro{border-color:var(--scarlet)!important}}
+@media print{.motion-state{display:none!important}}
