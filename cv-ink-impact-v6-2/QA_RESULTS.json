@@ -1,0 +1,176 @@
+{
+  "release": "INK / IMPACT VI.2",
+  "tested_with": "Chromium via Playwright; HTML/CSS/JS inlined because browser administrator blocked local and external network",
+  "responsive_matrix": [
+    {
+      "width": 320,
+      "horizontal_overflow_px": 0,
+      "javascript_errors": [],
+      "broken_anchors": []
+    },
+    {
+      "width": 360,
+      "horizontal_overflow_px": 0,
+      "javascript_errors": [],
+      "broken_anchors": []
+    },
+    {
+      "width": 375,
+      "horizontal_overflow_px": 0,
+      "javascript_errors": [],
+      "broken_anchors": []
+    },
+    {
+      "width": 390,
+      "horizontal_overflow_px": 0,
+      "javascript_errors": [],
+      "broken_anchors": []
+    },
+    {
+      "width": 430,
+      "horizontal_overflow_px": 0,
+      "javascript_errors": [],
+      "broken_anchors": []
+    },
+    {
+      "width": 650,
+      "horizontal_overflow_px": 0,
+      "javascript_errors": [],
+      "broken_anchors": []
+    },
+    {
+      "width": 651,
+      "horizontal_overflow_px": 0,
+      "javascript_errors": [],
+      "broken_anchors": []
+    },
+    {
+      "width": 768,
+      "horizontal_overflow_px": 0,
+      "javascript_errors": [],
+      "broken_anchors": []
+    },
+    {
+      "width": 950,
+      "horizontal_overflow_px": 0,
+      "javascript_errors": [],
+      "broken_anchors": []
+    },
+    {
+      "width": 951,
+      "horizontal_overflow_px": 0,
+      "javascript_errors": [],
+      "broken_anchors": []
+    },
+    {
+      "width": 1024,
+      "horizontal_overflow_px": 0,
+      "javascript_errors": [],
+      "broken_anchors": []
+    },
+    {
+      "width": 1280,
+      "horizontal_overflow_px": 0,
+      "javascript_errors": [],
+      "broken_anchors": []
+    },
+    {
+      "width": 1440,
+      "horizontal_overflow_px": 0,
+      "javascript_errors": [],
+      "broken_anchors": []
+    },
+    {
+      "width": 1920,
+      "horizontal_overflow_px": 0,
+      "javascript_errors": [],
+      "broken_anchors": []
+    }
+  ],
+  "interactions": {
+    "320": {
+      "errors": [],
+      "pdfFound": true,
+      "before": true,
+      "opened": true,
+      "expanded": "true",
+      "reading": true,
+      "motionDisabled": true,
+      "closedEscape": true,
+      "focusRestore": true,
+      "mobileMenuOpen": true,
+      "mobileMenuAfterLink": false,
+      "caseDetailOpens": true,
+      "scrollScene": "06",
+      "downloadLinks": 3,
+      "brokenAnchors": [],
+      "overflow": 0
+    },
+    "390": {
+      "errors": [],
+      "pdfFound": true,
+      "before": true,
+      "opened": true,
+      "expanded": "true",
+      "reading": true,
+      "motionDisabled": true,
+      "closedEscape": true,
+      "focusRestore": true,
+      "mobileMenuOpen": true,
+      "mobileMenuAfterLink": false,
+      "caseDetailOpens": true,
+      "scrollScene": "06",
+      "downloadLinks": 3,
+      "brokenAnchors": [],
+      "overflow": 0
+    },
+    "768": {
+      "errors": [],
+      "pdfFound": true,
+      "before": true,
+      "opened": true,
+      "expanded": "true",
+      "reading": true,
+      "motionDisabled": true,
+      "closedEscape": true,
+      "focusRestore": true,
+      "mobileMenuOpen": true,
+      "mobileMenuAfterLink": false,
+      "caseDetailOpens": true,
+      "scrollScene": "06",
+      "downloadLinks": 3,
+      "brokenAnchors": [],
+      "overflow": 0
+    },
+    "1440": {
+      "errors": [],
+      "pdfFound": true,
+      "before": true,
+      "opened": true,
+      "expanded": "true",
+      "reading": true,
+      "motionDisabled": true,
+      "closedEscape": true,
+      "focusRestore": true,
+      "caseDetailOpens": true,
+      "scrollScene": "06",
+      "downloadLinks": 3,
+      "brokenAnchors": [],
+      "overflow": 0
+    },
+    "reduced": {
+      "buttonDisabled": true,
+      "motionDisabled": true
+    },
+    "print": {
+      "pages": 2,
+      "textCharacters": 3635
+    }
+  },
+  "limitations": [
+    "Browser snapshots used fallback fonts; Google Fonts requests were blocked",
+    "Automated interactions/visual tests are not a substitute for real iOS Safari and Android Chrome testing",
+    "Core Web Vitals must be measured on production URL"
+  ],
+  "source_pdf_sha256": "e7cb68315e619b333b200f188965a1a0b9aabed0e649c1ad2d243288caadfa22"
+}
