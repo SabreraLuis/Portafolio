@@ -126,7 +126,14 @@
   scheduleHUD();
 
   $('print-button').addEventListener('click', () => window.print());
+  const closedForPrint = [];
   window.addEventListener('beforeprint', () => {
     allReveals.forEach(el => el.classList.add('is-in'));
+    document.querySelectorAll('.case-more').forEach(detail => {
+      if (!detail.open) { closedForPrint.push(detail); detail.open = true; }
+    });
+  });
+  window.addEventListener('afterprint', () => {
+    closedForPrint.splice(0).forEach(detail => { detail.open = false; });
   });
 })();
