@@ -30,3 +30,15 @@ La V6.2 y el portafolio principal NO se sustituyen. **QA local con fuentes fallb
 ## Procedencia
 
 Método derivado de la habilidad A.P.U `web-experience-engineering@0.1.0` staging, con fuentes primarias `addyosmani/agent-skills`. Véase: https://github.com/SabreraLuis/A.P.U-AUTOMATIZACI-N-PROGRESIVA-UNIVERSAL-/blob/main/skills/web-experience-engineering/SKILL.md
+
+## V7.1 — Pulido y prevención de regresiones
+
+- Acceso al PDF desde la portada y el menú móvil.
+- Controles separados de pausa/reactivación y reproducción de FX, con estado anunciado y preferencia de sesión cuando el navegador la permita.
+- Navegación visible sin JavaScript, retorno de menú al pasar a escritorio, nuevo favicon original.
+- Impresión web A4 compacta: tres páginas observadas en Chromium local (el PDF profesional original sigue disponible).
+- Checks automáticos: `qa/static_checks.py`, `qa/browser_smoke.py` y workflow `.github/workflows/criterio-v7-quality.yml`.
+- La prueba local pasó doce anchos y controles de teclado/táctil/movimiento reducido sin errores JavaScript ni overflow horizontal. GitHub Actions verificó el código publicado.
+- **Pendiente**: inspección de Safari/iOS y Android físico, Google Fonts públicas y métricas de rendimiento de campo. Ninguna afirmación de “cero errores absolutos”.
+
+Aprendizaje aplicado de frontend, diseño de interfaces, seguridad y CI de `addyosmani/agent-skills`, documentado en la skill staging de A.P.U: `skills/web-experience-engineering/references/frontend-backend-reliability.md`. GitHub Pages es estático; no se añadió un backend innecesario.
