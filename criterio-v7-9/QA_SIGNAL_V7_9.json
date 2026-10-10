@@ -1,0 +1,135 @@
+{
+  "widths": [
+    {
+      "width": 320,
+      "overflow": 0,
+      "clippedHeadings": [],
+      "errors": [],
+      "glitchClones": 2,
+      "brokenAnchors": 0
+    },
+    {
+      "width": 360,
+      "overflow": 0,
+      "clippedHeadings": [],
+      "errors": [],
+      "glitchClones": 2,
+      "brokenAnchors": 0
+    },
+    {
+      "width": 375,
+      "overflow": 0,
+      "clippedHeadings": [],
+      "errors": [],
+      "glitchClones": 2,
+      "brokenAnchors": 0
+    },
+    {
+      "width": 390,
+      "overflow": 0,
+      "clippedHeadings": [],
+      "errors": [],
+      "glitchClones": 2,
+      "brokenAnchors": 0
+    },
+    {
+      "width": 430,
+      "overflow": 0,
+      "clippedHeadings": [],
+      "errors": [],
+      "glitchClones": 2,
+      "brokenAnchors": 0
+    },
+    {
+      "width": 650,
+      "overflow": 0,
+      "clippedHeadings": [],
+      "errors": [],
+      "glitchClones": 2,
+      "brokenAnchors": 0
+    },
+    {
+      "width": 700,
+      "overflow": 0,
+      "clippedHeadings": [],
+      "errors": [],
+      "glitchClones": 2,
+      "brokenAnchors": 0
+    },
+    {
+      "width": 768,
+      "overflow": 0,
+      "clippedHeadings": [],
+      "errors": [],
+      "glitchClones": 2,
+      "brokenAnchors": 0
+    },
+    {
+      "width": 900,
+      "overflow": 0,
+      "clippedHeadings": [],
+      "errors": [],
+      "glitchClones": 2,
+      "brokenAnchors": 0
+    },
+    {
+      "width": 1024,
+      "overflow": 0,
+      "clippedHeadings": [],
+      "errors": [],
+      "glitchClones": 2,
+      "brokenAnchors": 0
+    },
+    {
+      "width": 1280,
+      "overflow": 0,
+      "clippedHeadings": [],
+      "errors": [],
+      "glitchClones": 2,
+      "brokenAnchors": 0
+    },
+    {
+      "width": 1440,
+      "overflow": 0,
+      "clippedHeadings": [],
+      "errors": [],
+      "glitchClones": 2,
+      "brokenAnchors": 0
+    },
+    {
+      "width": 1920,
+      "overflow": 0,
+      "clippedHeadings": [],
+      "errors": [],
+      "glitchClones": 2,
+      "brokenAnchors": 0
+    }
+  ],
+  "interactions": {
+    "menu_opens": true,
+    "menu_esc_closes": true,
+    "hero_text_real": true,
+    "decorative_only": true,
+    "glitch_animation_running": true,
+    "razor_animation_running": true,
+    "motion_off": true,
+    "glitch_stopped": true,
+    "motion_on": true,
+    "evidence_case_visible": true,
+    "email_link": true,
+    "pdf_link": true,
+    "no_js_error": true
+  },
+  "accessibility": {
+    "unique_h1": true,
+    "no_extra_ghosts_announced": true,
+    "src_content": true,
+    "reduced_motion_off_initially": true,
+    "reduced_motion_content_visible": true,
+    "reduced_opt_in_works": true,
+    "reduced_opt_out_works": true,
+    "no_js_menu": true,
+    "no_js_glitch_base": true
+  },
+  "source": "chromium-inlined-exact-src-no-external-fonts"
+}

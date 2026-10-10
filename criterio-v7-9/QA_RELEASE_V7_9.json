@@ -1,0 +1,13 @@
+{
+  "version": "7.9",
+  "release_name": "Signal Cut — Copy & Contemporary Motion",
+  "base": "criterio-v7-8",
+  "local_status": "PASS",
+  "viewports_checked": 13,
+  "javascript_page_errors": 0,
+  "horizontal_overflow_px": 0,
+  "tests": ["static_checks", "resource_budget", "marketing_positioning", "signal_cut", "browser_smoke", "navigation_quality", "dossier_motion", "cinematic_bridges", "production_gate"],
+  "source": "local Chromium, inline original HTML/CSS/JS; fallback fonts",
+  "not_verified": ["real Android and iOS", "published CDN HTTP resources", "Google Fonts final rendering", "field Core Web Vitals"],
+  "rollback": "/Portafolio/criterio-v7-8/"
+}

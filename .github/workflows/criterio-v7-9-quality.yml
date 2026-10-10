@@ -1,0 +1,44 @@
+name: CRITERIO V7.9 copy and signal motion
+on:
+  push:
+    paths:
+      - 'criterio-v7-9/**'
+      - '.github/workflows/criterio-v7-9-quality.yml'
+  pull_request:
+    paths:
+      - 'criterio-v7-9/**'
+      - '.github/workflows/criterio-v7-9-quality.yml'
+permissions:
+  contents: read
+jobs:
+  release-quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Syntax and static quality
+        run: |
+          node --check criterio-v7-9/app.js
+          python criterio-v7-9/qa/static_checks.py
+          python criterio-v7-9/qa/resource_budget.py
+      - name: Install Chromium
+        run: |
+          python -m pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Professional positioning, motion and mobile QA
+        run: |
+          python criterio-v7-9/qa/marketing_positioning.py
+          python criterio-v7-9/qa/signal_cut.py
+      - name: Navigation, experience and transition regression
+        run: |
+          python criterio-v7-9/qa/browser_smoke.py
+          python criterio-v7-9/qa/navigation_quality.py
+          python criterio-v7-9/qa/dossier_motion.py
+          python criterio-v7-9/qa/cinematic_bridges.py
+          python criterio-v7-9/qa/production_gate.py
