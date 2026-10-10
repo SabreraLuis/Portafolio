@@ -37,3 +37,11 @@ Run local Chromium across eight viewport widths, normal and reduced motion, mobi
 - Layout: viewport test matrix 320, 360, 375, 390, 430, 650, 651, 768, 950, 951, 1024, 1280, 1440, 1920px. No overflow permitted.
 - Progressive enhancement and user OS motion preference are preserved. Print and source PDF remain two separate workflows.
 - Source fact integrity: never add fictional sales, campaigns, metrics, awards or products. No proprietary Bleach IP or direct composition copies.
+
+## VI.2.1 — Regla de movimiento visible
+
+**Jerarquía de movimiento:** portada continua de baja amplitud (afiche, retícula, cinta), impactos no recurrentes de capítulo, cambios tipográficos en el primer contacto y microinteracción mediante botón reproducible. El ticker es completamente ornamental (`aria-hidden`). Las experiencias utilizan revelado lateral de paneles, escalas y secuencias diferenciadas; el contenido esencial nunca se oculta hasta que JavaScript lo recupera.
+
+**Control:** reducir movimiento del SO desactiva todos los efectos, y el interruptor MOVIMIENTO: OFF cancela incluso las animaciones WAAPI en curso. Un replay terminado se cancela para liberar estilos temporales y restaurar la composición final.
+
+**Rendimiento:** transformaciones/opacity, IntersectionObserver para capítulos, pause del afiche fuera de pantalla. Sin scroll hijacking ni bibliotecas externas. `motion-director.css/js` son módulos separables para rollback.
