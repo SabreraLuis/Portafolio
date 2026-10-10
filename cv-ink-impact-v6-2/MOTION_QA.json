@@ -1,0 +1,103 @@
+{
+  "matrix": [
+    {
+      "overflow": 0,
+      "heroHeadlineVisible": true,
+      "ticker": "im-marquee",
+      "ring": "im-ring",
+      "replayEnabled": true,
+      "width": 320,
+      "errors": []
+    },
+    {
+      "overflow": 0,
+      "heroHeadlineVisible": true,
+      "ticker": "im-marquee",
+      "ring": "im-ring",
+      "replayEnabled": true,
+      "width": 360,
+      "errors": []
+    },
+    {
+      "overflow": 0,
+      "heroHeadlineVisible": true,
+      "ticker": "im-marquee",
+      "ring": "im-ring",
+      "replayEnabled": true,
+      "width": 390,
+      "errors": [],
+      "replayVisible": true,
+      "replayCancelledOnOff": true
+    },
+    {
+      "overflow": 0,
+      "heroHeadlineVisible": true,
+      "ticker": "im-marquee",
+      "ring": "im-ring",
+      "replayEnabled": true,
+      "width": 430,
+      "errors": []
+    },
+    {
+      "overflow": 0,
+      "heroHeadlineVisible": true,
+      "ticker": "im-marquee",
+      "ring": "im-ring",
+      "replayEnabled": true,
+      "width": 650,
+      "errors": []
+    },
+    {
+      "overflow": 0,
+      "heroHeadlineVisible": true,
+      "ticker": "im-marquee",
+      "ring": "im-ring",
+      "replayEnabled": true,
+      "width": 768,
+      "errors": []
+    },
+    {
+      "overflow": 0,
+      "heroHeadlineVisible": true,
+      "ticker": "im-marquee",
+      "ring": "im-ring",
+      "replayEnabled": true,
+      "width": 950,
+      "errors": []
+    },
+    {
+      "overflow": 0,
+      "heroHeadlineVisible": true,
+      "ticker": "im-marquee",
+      "ring": "im-ring",
+      "replayEnabled": true,
+      "width": 1024,
+      "errors": []
+    },
+    {
+      "overflow": 0,
+      "heroHeadlineVisible": true,
+      "ticker": "im-marquee",
+      "ring": "im-ring",
+      "replayEnabled": true,
+      "width": 1440,
+      "errors": [],
+      "replayVisible": true,
+      "replayCancelledOnOff": true
+    },
+    {
+      "overflow": 0,
+      "heroHeadlineVisible": true,
+      "ticker": "im-marquee",
+      "ring": "im-ring",
+      "replayEnabled": true,
+      "width": 1920,
+      "errors": []
+    }
+  ],
+  "reducedMotion": {
+    "ticker": "none",
+    "replayDisabled": true,
+    "headlineVisible": true
+  }
+}
