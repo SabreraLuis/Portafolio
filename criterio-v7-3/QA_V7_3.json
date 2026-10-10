@@ -1,0 +1,219 @@
+{
+  "version": "7.3",
+  "status": "local_verified",
+  "baseline_viewports": [
+    {
+      "width": 320,
+      "overflow": 0,
+      "js_errors": [],
+      "headings_outside_viewport": 0
+    },
+    {
+      "width": 360,
+      "overflow": 0,
+      "js_errors": [],
+      "headings_outside_viewport": 0
+    },
+    {
+      "width": 375,
+      "overflow": 0,
+      "js_errors": [],
+      "headings_outside_viewport": 0
+    },
+    {
+      "width": 390,
+      "overflow": 0,
+      "js_errors": [],
+      "headings_outside_viewport": 0
+    },
+    {
+      "width": 430,
+      "overflow": 0,
+      "js_errors": [],
+      "headings_outside_viewport": 0
+    },
+    {
+      "width": 650,
+      "overflow": 0,
+      "js_errors": [],
+      "headings_outside_viewport": 0
+    },
+    {
+      "width": 768,
+      "overflow": 0,
+      "js_errors": [],
+      "headings_outside_viewport": 0
+    },
+    {
+      "width": 900,
+      "overflow": 0,
+      "js_errors": [],
+      "headings_outside_viewport": 0
+    },
+    {
+      "width": 1024,
+      "overflow": 0,
+      "js_errors": [],
+      "headings_outside_viewport": 0
+    },
+    {
+      "width": 1280,
+      "overflow": 0,
+      "js_errors": [],
+      "headings_outside_viewport": 0
+    },
+    {
+      "width": 1440,
+      "overflow": 0,
+      "js_errors": [],
+      "headings_outside_viewport": 0
+    },
+    {
+      "width": 1920,
+      "overflow": 0,
+      "js_errors": [],
+      "headings_outside_viewport": 0
+    }
+  ],
+  "baseline_interactions": {
+    "menu_opens": true,
+    "pdf_visible_in_menu": true,
+    "menu_escape": true,
+    "pdf_visible_in_hero": true,
+    "fx_pauses": true,
+    "fx_resumes": true,
+    "replay_moves": true,
+    "scroll_reveals": true,
+    "case_index_anchor": true,
+    "interlude_visible": true,
+    "interlude_motion_measurable": true,
+    "menu_reset_on_resize": true,
+    "reduced_default_off": true,
+    "reduced_explicit_opt_in": true,
+    "reduced_explicit_opt_out": true,
+    "nojs_navigation": true,
+    "nojs_pdf": true
+  },
+  "case_motion_matrix": {
+    "390": {
+      "amp": {
+        "activeLink": true,
+        "inFocus": true,
+        "jump": "#metodo",
+        "graphicVisible": true,
+        "graphicMoving": true,
+        "overflow": 0
+      },
+      "prod": {
+        "activeLink": true,
+        "inFocus": true,
+        "jump": "#evidencia",
+        "graphicVisible": true,
+        "graphicMoving": true,
+        "overflow": 0
+      },
+      "tkoh": {
+        "activeLink": true,
+        "inFocus": true,
+        "jump": "#metodo",
+        "graphicVisible": true,
+        "graphicMoving": true,
+        "overflow": 0
+      },
+      "sunafil": {
+        "activeLink": true,
+        "inFocus": true,
+        "jump": "#evidencia",
+        "graphicVisible": true,
+        "graphicMoving": true,
+        "overflow": 0
+      }
+    },
+    "768": {
+      "amp": {
+        "activeLink": true,
+        "inFocus": true,
+        "jump": "#metodo",
+        "graphicVisible": true,
+        "graphicMoving": true,
+        "overflow": 0
+      },
+      "prod": {
+        "activeLink": true,
+        "inFocus": true,
+        "jump": "#evidencia",
+        "graphicVisible": true,
+        "graphicMoving": true,
+        "overflow": 0
+      },
+      "tkoh": {
+        "activeLink": true,
+        "inFocus": true,
+        "jump": "#metodo",
+        "graphicVisible": true,
+        "graphicMoving": true,
+        "overflow": 0
+      },
+      "sunafil": {
+        "activeLink": true,
+        "inFocus": true,
+        "jump": "#evidencia",
+        "graphicVisible": true,
+        "graphicMoving": true,
+        "overflow": 0
+      }
+    },
+    "1440": {
+      "amp": {
+        "activeLink": true,
+        "inFocus": true,
+        "jump": "#metodo",
+        "graphicVisible": true,
+        "graphicMoving": true,
+        "overflow": 0
+      },
+      "prod": {
+        "activeLink": true,
+        "inFocus": true,
+        "jump": "#evidencia",
+        "graphicVisible": true,
+        "graphicMoving": true,
+        "overflow": 0
+      },
+      "tkoh": {
+        "activeLink": true,
+        "inFocus": true,
+        "jump": "#metodo",
+        "graphicVisible": true,
+        "graphicMoving": true,
+        "overflow": 0
+      },
+      "sunafil": {
+        "activeLink": true,
+        "inFocus": true,
+        "jump": "#evidencia",
+        "graphicVisible": true,
+        "graphicMoving": true,
+        "overflow": 0
+      }
+    }
+  },
+  "case_checks": {
+    "paused_motion": true,
+    "index_navigation": true,
+    "case_actions_factual": true,
+    "minimum_touch_target": true
+  },
+  "browser_errors": [],
+  "limitations": [
+    "Local Chromium, CSS/JS inline, network fonts not loaded",
+    "No physical Android or iPhone Safari verification",
+    "No field Core Web Vitals measurements",
+    "Public GitHub Pages network request verification pending"
+  ],
+  "findings_resolved": [
+    "mobile grid column inherited from tablet had silently created an implicit second column; fixed explicit mobile grid-column:1/-1",
+    "case navigation now exposes active aria-current and visible context",
+    "all four dossier visuals show observed animation with t0/t1 difference at 390/768/1440px"
+  ]
+}
