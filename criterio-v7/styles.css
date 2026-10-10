@@ -26,3 +26,43 @@ html[data-motion="on"] [data-reveal]:not(.is-visible){opacity:0;transform:transl
 @media(min-width:651px) and (max-width:900px){.method-stages{display:block}.method-stages article,.method-stages article+article{padding:24px 0 30px;border-left:0;border-bottom:1px solid var(--line)}.method-stages h3{font-size:clamp(50px,8vw,67px);margin:15px 0}}
 @media(max-width:650px){.method-stages h3{font-size:clamp(35px,9vw,61px)}.training h3{font-size:clamp(40px,10vw,70px)}.evidence-intro h2{font-size:clamp(56px,12vw,98px)}}
 @media(max-width:359px){.manifesto-content h2{font-size:51px}}
+
+
+/* CRITERIO V7.1: stability, accessible controls and mobile recruiter workflow */
+.mobile-nav-cv{display:none!important}
+.action-pdf,.motion-toggle{display:inline-flex;align-items:center;justify-content:center;min-height:44px;white-space:nowrap;font:700 10px/1.5 var(--mono);border:1px solid var(--ink);padding:11px 14px;background:transparent;color:var(--ink);transition:background .18s ease,color .18s ease}
+.action-pdf:hover,.motion-toggle:hover{background:var(--ink);color:var(--paper)}
+.motion-toggle[aria-pressed="false"]{color:var(--red-dark);border-color:var(--red-dark)}
+.masthead a:focus-visible,.hero-actions a:focus-visible,.hero-actions button:focus-visible{outline:3px solid var(--red-dark);outline-offset:3px}
+@media(max-width:900px){
+ .navigation.is-open .mobile-nav-cv{display:block!important;background:var(--ink);color:var(--paper);padding:15px;border-bottom:0;font-weight:700}
+ html:not(.has-js) .masthead{flex-wrap:wrap;height:auto}
+ html:not(.has-js) .navigation{display:flex!important;position:static!important;flex:1 0 100%;background:var(--paper);box-shadow:none;padding:8px 0 16px;flex-direction:column;align-items:stretch}
+ html:not(.has-js) .navigation .mobile-nav-cv{display:block!important;background:var(--ink);color:var(--paper);padding:15px}
+ html:not(.has-js) .menu-btn{display:none!important}
+}
+@media(max-width:650px){.action-pdf,.motion-toggle{padding:10px 12px;min-height:44px}.hero-actions{gap:12px}.hero-actions .action-primary{flex-basis:100%;justify-content:space-between}.motion-status{flex-basis:100%}}
+@media print{.action-pdf,.motion-toggle,.mobile-nav-cv{display:none!important}}
+/* A4 web print: compact layout; full original 1-page CV remains downloadable. */
+@media print {
+ @page {size:A4; margin:9mm}
+ html,body,main{height:auto!important; min-height:0!important; overflow:visible!important}
+ .hero,.hero-paper,.hero-lead,.hero-main,.manifesto,.manifesto-content,.manifesto-columns,.archive,.archive-header,.evidence,.evidence-layout,.method,.method-head,.method-stages,.training,.contact,.section-pad {display:block!important;height:auto!important; min-height:0!important; max-height:none!important; overflow:visible!important; margin:0!important; padding:0!important}
+ .hero{margin-bottom:6mm!important}
+ .hero-topline,.hero-bottomline,.hero-index,.hero-kicker,.hero-actions,.hero-visual,.transition-band,.manifesto-aside,.manifesto-foot,.section-mark,.eyebrow,.archive-aside,.dossier-visual,.dossier-index,.dossier-type,.dossier-text-label,.evidence-bottom,.method-intro,.contact-cut,.footer,.progress,.skip {display:none!important}
+ .hero h1{font-size:40pt!important;line-height:.88!important;letter-spacing:-.015em!important;margin:0 0 3mm!important}
+ .hero-sub{font-size:17pt!important;margin:1mm 0!important}.hero-description{font-size:9pt!important;margin:0!important;max-width:none!important}
+ .display-head,.archive-header h2,.manifesto-content h2,.evidence-intro h2,.method-head h2,.contact-head{font-size:24pt!important;line-height:1!important;letter-spacing:0!important;margin:6mm 0 3mm!important}
+ .manifesto-columns p,.manifesto-content p,.copy-stack p,.archive p,.dossier p,.evidence p,.method p,.training p,.contact p{font-size:9pt!important;line-height:1.25!important;max-width:none!important;margin:1.5mm 0!important;color:#111!important}
+ .manifesto-columns,.dossier-list,.dossier,.dossier-title,.dossier-text,.evidence-numbers,.method-stages article,.tools-line,.training,.contact-base{padding:0!important;margin:0!important;min-height:0!important;break-inside:auto!important}
+ .dossier{border-bottom:1px solid #ddd;break-inside:avoid!important;padding:2mm 0!important}
+ .dossier-title h3{font-size:18pt!important;line-height:1!important;margin:1mm 0!important}
+ .dossier-role{font-size:9pt!important;margin:0!important}
+ .evidence-numbers{display:flex!important;gap:5mm}
+ .metric{flex:1;min-width:0;padding:0!important;margin:0!important}.metric strong{font-size:22pt!important}
+ .method-stages{display:flex!important;gap:5mm}.method-stages article{flex:1;min-width:0;break-inside:avoid!important}
+ .method-stages h3{font-size:12pt!important;margin:0!important}.method-stages article p{font-size:8pt!important}
+ .tools-line{margin-top:2mm!important}.training{margin-top:3mm!important}.training h3{font-size:13pt!important;margin:0!important}
+ .contact-base{display:flex!important;gap:10mm}.contact-head{font-size:23pt!important;margin:3mm 0!important}
+ .contact-cta{font-size:12pt!important}.contact-address{display:block!important}.contact-address a{font-size:8pt!important}
+}
