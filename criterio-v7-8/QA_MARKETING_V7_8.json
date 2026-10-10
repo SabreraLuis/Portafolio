@@ -1,0 +1,55 @@
+{
+  "case_order": [
+    "amp",
+    "prod",
+    "sunafil",
+    "tkoh"
+  ],
+  "marketing_pillars": 3,
+  "views": [
+    {
+      "width": 320,
+      "overflow": 0,
+      "errors": []
+    },
+    {
+      "width": 360,
+      "overflow": 0,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "overflow": 0,
+      "errors": []
+    },
+    {
+      "width": 430,
+      "overflow": 0,
+      "errors": []
+    },
+    {
+      "width": 768,
+      "overflow": 0,
+      "errors": []
+    },
+    {
+      "width": 1024,
+      "overflow": 0,
+      "errors": []
+    },
+    {
+      "width": 1440,
+      "overflow": 0,
+      "errors": []
+    },
+    {
+      "width": 1920,
+      "overflow": 0,
+      "errors": []
+    }
+  ],
+  "notes": [
+    "Chromium fallback fonts, no real public CDN validation",
+    "Communication for development is a professional direction, not a claimed completed C4D program."
+  ]
+}

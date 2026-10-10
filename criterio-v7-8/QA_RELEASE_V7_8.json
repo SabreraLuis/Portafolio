@@ -1,0 +1,30 @@
+{
+  "version": "CRITERIO V7.8 — Comunicación Integral",
+  "status": "local-QA-passed-deployment-pending",
+  "professional_order": [
+    "Amazon Magic Park / performance",
+    "20 Prod. / advertising and brand",
+    "SUNAFIL / institutional communication",
+    "Studios TKOH / UX complement"
+  ],
+  "programs_C4D_claimed": 0,
+  "source_of_metrics": "user-supplied CV",
+  "local_tests": [
+    "static_checks.py",
+    "resource_budget.py",
+    "browser_smoke.py",
+    "dossier_motion.py",
+    "cinematic_bridges.py",
+    "production_gate.py",
+    "living_fx.py",
+    "navigation_quality.py",
+    "marketing_positioning.py"
+  ],
+  "responsive_tested": "320 to 1920px Chromium fallback fonts",
+  "known_gaps": [
+    "Public font load verification",
+    "Mobile physical Safari and Android",
+    "Production Core Web Vitals",
+    "User review of professional copy"
+  ]
+}
