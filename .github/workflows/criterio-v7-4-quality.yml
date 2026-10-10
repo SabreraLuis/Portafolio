@@ -1,0 +1,41 @@
+name: CRITERIO V7.4 quality
+
+on:
+  push:
+    paths:
+      - 'criterio-v7-4/**'
+      - '.github/workflows/criterio-v7-4-quality.yml'
+  pull_request:
+    paths:
+      - 'criterio-v7-4/**'
+      - '.github/workflows/criterio-v7-4-quality.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  site-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Static HTML and asset checks
+        run: python criterio-v7-4/qa/static_checks.py
+      - name: JS syntax
+        run: node --check criterio-v7-4/app.js
+      - name: Install browser test runtime
+        run: |
+          python -m pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Responsive and interaction QA
+        run: python criterio-v7-4/qa/browser_smoke.py
+      - name: Dossier QA
+        run: python criterio-v7-4/qa/dossier_motion.py
+      - name: Cinematic bridge QA
+        run: python criterio-v7-4/qa/cinematic_bridges.py
