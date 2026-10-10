@@ -1,0 +1,303 @@
+{
+  "version": "CRITERIO V7.4",
+  "status": "LOCAL_QA_PASS",
+  "date": "2026-10-10",
+  "scope": "Local Chromium tests with JS/CSS inlined, fallback fonts",
+  "responsive": {
+    "widths_tested": [
+      320,
+      360,
+      375,
+      390,
+      430,
+      650,
+      768,
+      900,
+      1024,
+      1280,
+      1440,
+      1920
+    ],
+    "max_horizontal_overflow_px": 0,
+    "uncaught_js_errors": []
+  },
+  "interactions": {
+    "menu_opens": true,
+    "pdf_visible_in_menu": true,
+    "menu_escape": true,
+    "pdf_visible_in_hero": true,
+    "fx_pauses": true,
+    "fx_resumes": true,
+    "replay_moves": true,
+    "scroll_reveals": true,
+    "case_index_anchor": true,
+    "interlude_visible": true,
+    "interlude_motion_measurable": true,
+    "menu_reset_on_resize": true,
+    "reduced_default_off": true,
+    "reduced_explicit_opt_in": true,
+    "reduced_explicit_opt_out": true,
+    "nojs_navigation": true,
+    "nojs_pdf": true
+  },
+  "dossiers": {
+    "cases": {
+      "390": {
+        "amp": {
+          "activeLink": true,
+          "inFocus": true,
+          "jump": "#metodo",
+          "graphicVisible": true,
+          "visualWidthRatio": 1,
+          "graphicMoving": true,
+          "overflow": 0
+        },
+        "prod": {
+          "activeLink": true,
+          "inFocus": true,
+          "jump": "#evidencia",
+          "graphicVisible": true,
+          "visualWidthRatio": 1,
+          "graphicMoving": true,
+          "overflow": 0
+        },
+        "tkoh": {
+          "activeLink": true,
+          "inFocus": true,
+          "jump": "#metodo",
+          "graphicVisible": true,
+          "visualWidthRatio": 1,
+          "graphicMoving": true,
+          "overflow": 0
+        },
+        "sunafil": {
+          "activeLink": true,
+          "inFocus": true,
+          "jump": "#evidencia",
+          "graphicVisible": true,
+          "visualWidthRatio": 1,
+          "graphicMoving": true,
+          "overflow": 0
+        }
+      },
+      "768": {
+        "amp": {
+          "activeLink": true,
+          "inFocus": true,
+          "jump": "#metodo",
+          "graphicVisible": true,
+          "visualWidthRatio": 0.4,
+          "graphicMoving": true,
+          "overflow": 0
+        },
+        "prod": {
+          "activeLink": true,
+          "inFocus": true,
+          "jump": "#evidencia",
+          "graphicVisible": true,
+          "visualWidthRatio": 0.4,
+          "graphicMoving": true,
+          "overflow": 0
+        },
+        "tkoh": {
+          "activeLink": true,
+          "inFocus": true,
+          "jump": "#metodo",
+          "graphicVisible": true,
+          "visualWidthRatio": 0.4,
+          "graphicMoving": true,
+          "overflow": 0
+        },
+        "sunafil": {
+          "activeLink": true,
+          "inFocus": true,
+          "jump": "#evidencia",
+          "graphicVisible": true,
+          "visualWidthRatio": 0.4,
+          "graphicMoving": true,
+          "overflow": 0
+        }
+      },
+      "1440": {
+        "amp": {
+          "activeLink": true,
+          "inFocus": true,
+          "jump": "#metodo",
+          "graphicVisible": true,
+          "visualWidthRatio": 0.28,
+          "graphicMoving": true,
+          "overflow": 0
+        },
+        "prod": {
+          "activeLink": true,
+          "inFocus": true,
+          "jump": "#evidencia",
+          "graphicVisible": true,
+          "visualWidthRatio": 0.28,
+          "graphicMoving": true,
+          "overflow": 0
+        },
+        "tkoh": {
+          "activeLink": true,
+          "inFocus": true,
+          "jump": "#metodo",
+          "graphicVisible": true,
+          "visualWidthRatio": 0.28,
+          "graphicMoving": true,
+          "overflow": 0
+        },
+        "sunafil": {
+          "activeLink": true,
+          "inFocus": true,
+          "jump": "#evidencia",
+          "graphicVisible": true,
+          "visualWidthRatio": 0.28,
+          "graphicMoving": true,
+          "overflow": 0
+        }
+      }
+    },
+    "checks": {
+      "paused_motion": true,
+      "index_navigation": true,
+      "case_actions_factual": true,
+      "minimum_touch_target": true
+    },
+    "errors": [],
+    "notes": [
+      "Chromium with inline JS and CSS, fallback fonts; not mobile physical nor public HTTP test"
+    ]
+  },
+  "cinematic": {
+    "bridges": {
+      "320": [
+        {
+          "inViewport": true,
+          "visible": true,
+          "activated": true,
+          "motionMeasured": true,
+          "overflow": 0
+        },
+        {
+          "inViewport": true,
+          "visible": true,
+          "activated": true,
+          "motionMeasured": true,
+          "overflow": 0
+        }
+      ],
+      "390": [
+        {
+          "inViewport": true,
+          "visible": true,
+          "activated": true,
+          "motionMeasured": true,
+          "overflow": 0
+        },
+        {
+          "inViewport": true,
+          "visible": true,
+          "activated": true,
+          "motionMeasured": true,
+          "overflow": 0
+        }
+      ],
+      "768": [
+        {
+          "inViewport": true,
+          "visible": true,
+          "activated": true,
+          "motionMeasured": true,
+          "overflow": 0
+        },
+        {
+          "inViewport": true,
+          "visible": true,
+          "activated": true,
+          "motionMeasured": true,
+          "overflow": 0
+        }
+      ],
+      "1440": [
+        {
+          "inViewport": true,
+          "visible": true,
+          "activated": true,
+          "motionMeasured": true,
+          "overflow": 0
+        },
+        {
+          "inViewport": true,
+          "visible": true,
+          "activated": true,
+          "motionMeasured": true,
+          "overflow": 0
+        }
+      ],
+      "1920": [
+        {
+          "inViewport": true,
+          "visible": true,
+          "activated": true,
+          "motionMeasured": true,
+          "overflow": 0
+        },
+        {
+          "inViewport": true,
+          "visible": true,
+          "activated": true,
+          "motionMeasured": true,
+          "overflow": 0
+        }
+      ]
+    },
+    "next_links": {
+      "390": [
+        {
+          "source": "amp",
+          "target": "#dossier-prod",
+          "expected": "#dossier-prod",
+          "touchHeight": 55.6,
+          "tabbable": true
+        },
+        {
+          "source": "prod",
+          "target": "#dossier-tkoh",
+          "expected": "#dossier-tkoh",
+          "touchHeight": 55.6,
+          "tabbable": true
+        },
+        {
+          "source": "tkoh",
+          "target": "#dossier-sunafil",
+          "expected": "#dossier-sunafil",
+          "touchHeight": 55.6,
+          "tabbable": true
+        },
+        {
+          "source": "sunafil",
+          "target": "#evidencia",
+          "expected": "#evidencia",
+          "touchHeight": 55.6,
+          "tabbable": true
+        }
+      ]
+    },
+    "reduced_motion": {
+      "default_off": true,
+      "no_animation": true,
+      "text_visible": true,
+      "explicit_optin": true,
+      "activated": true,
+      "optin_animation": true
+    },
+    "console_errors": []
+  },
+  "limits": [
+    "No physical Android or iOS verified",
+    "No live Safari verification",
+    "Google Fonts blocked in local headless environment",
+    "Core Web Vitals are not measured",
+    "GitHub Pages deployment separate from local visual QA"
+  ]
+}
