@@ -1,0 +1,83 @@
+/* INK / IMPACT • MOTION DIRECTOR / VI.2.1
+   Visible editorial motion, native CSS/WAAPI, no scroll blocking.
+   All text remains readable without JS, with motion disabled, and in print. */
+.replay-intro{appearance:none;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:8px 3px;background:transparent;color:var(--ink);border:0;border-bottom:2px solid var(--scarlet);font:700 10px/1.3 var(--mono);white-space:nowrap;letter-spacing:.01em;cursor:pointer;transition:color .2s,border-color .2s}
+.replay-intro>span{font-size:12px;background:var(--scarlet);color:var(--white);display:grid;place-items:center;width:25px;height:25px;border-radius:50%;padding-left:2px}
+.replay-intro:hover{color:var(--scarlet-strong);border-color:var(--ink)}
+.replay-intro:disabled{opacity:.6;cursor:not-allowed}
+/* Marquee uses two identical sets for a seamless continuous horizontal track. */
+.hero-ticker{overflow:hidden;justify-content:initial;white-space:nowrap;padding-block:0!important;padding-inline:0!important}
+.ticker-track{display:flex;align-items:center;width:max-content;min-width:100%;will-change:transform}
+.ticker-set{display:flex;align-items:center;justify-content:space-around;gap:clamp(20px,4vw,65px);flex:0 0 auto;padding:13px clamp(20px,4vw,65px)}
+.ticker-set span{font-weight:700;letter-spacing:.09em}
+.ticker-set i{font:normal 18px/1 var(--sans,Arial,sans-serif)}
+/* The active chapter gets a graphic stroke; no overlays cover content. */
+.scene>.section-header{position:relative}
+.scene>.section-header::before{content:"";position:absolute;top:-2px;left:0;width:100%;height:2px;background:var(--scarlet);transform:scaleX(0);transform-origin:0 50%;pointer-events:none}
+.scene--red>.section-header::before{background:var(--ink)}
+/* Animation declarations are all gated by the actual motion setting. */
+@media (prefers-reduced-motion:no-preference){
+ html.motion-enabled:not(.reading-mode) .hero .ticker-track{animation:im-marquee 23s linear infinite}
+ html.motion-enabled:not(.reading-mode) .hero .poster-grid{animation:im-grid 16s linear infinite alternate;will-change:background-position}
+ html.motion-enabled:not(.reading-mode) .hero .poster-ring{animation:im-ring 8.5s ease-in-out infinite alternate;will-change:transform}
+ html.motion-enabled:not(.reading-mode) .hero .poster-monogram{animation:im-monogram 9.5s ease-in-out infinite alternate;will-change:transform}
+ html.motion-enabled:not(.reading-mode) .hero .poster-star{animation:im-star 5.2s ease-in-out infinite alternate;transform-origin:50% 50%}
+ html.motion-enabled:not(.reading-mode) .hero .poster-cut{animation:im-cut 11s ease-in-out infinite alternate}
+ html.motion-enabled:not(.reading-mode) .hero.is-motion-paused .ticker-track,
+ html.motion-enabled:not(.reading-mode) .hero.is-motion-paused .poster-grid,
+ html.motion-enabled:not(.reading-mode) .hero.is-motion-paused .poster-ring,
+ html.motion-enabled:not(.reading-mode) .hero.is-motion-paused .poster-monogram,
+ html.motion-enabled:not(.reading-mode) .hero.is-motion-paused .poster-star,
+ html.motion-enabled:not(.reading-mode) .hero.is-motion-paused .poster-cut{animation-play-state:paused}
+ html.motion-enabled:not(.reading-mode) .scene.is-motion-seen>.section-header::before{animation:im-rule .95s cubic-bezier(.22,1,.36,1) both}
+ html.motion-enabled:not(.reading-mode) .manifesto.is-motion-seen .line-mask>span{animation:im-type .9s cubic-bezier(.22,.8,.19,1) both}
+ html.motion-enabled:not(.reading-mode) .manifesto.is-motion-seen .line-mask:nth-child(2)>span{animation-delay:.10s}
+ html.motion-enabled:not(.reading-mode) .manifesto.is-motion-seen .line-mask:nth-child(3)>span{animation-delay:.18s}
+ html.motion-enabled:not(.reading-mode) .manifesto.is-motion-seen .line-mask:nth-child(4)>span{animation-delay:.26s}
+ html.motion-enabled:not(.reading-mode) .case.is-motion-seen .case-art{animation:im-reveal-art 1s cubic-bezier(.17,.85,.24,1) both}
+ html.motion-enabled:not(.reading-mode) .case.is-motion-seen .case-category{animation:im-label .65s .1s both}
+ html.motion-enabled:not(.reading-mode) .case--amp.is-motion-seen .funnel span{animation:im-flow .7s both}
+ html.motion-enabled:not(.reading-mode) .case--amp.is-motion-seen .funnel span:nth-of-type(2){animation-delay:.18s}
+ html.motion-enabled:not(.reading-mode) .case--amp.is-motion-seen .funnel span:nth-of-type(3){animation-delay:.33s}
+ html.motion-enabled:not(.reading-mode) .case--amp.is-motion-seen .funnel span:nth-of-type(4){animation-delay:.48s}
+ html.motion-enabled:not(.reading-mode) .case--prod.is-motion-seen .giant-number{animation:im-metric .95s .18s both}
+ html.motion-enabled:not(.reading-mode) .case--tkoh.is-motion-seen .ui-window{animation:im-window 1.1s .14s both}
+ html.motion-enabled:not(.reading-mode) .case--sunafil.is-motion-seen .dual-metrics strong{animation:im-metric 1s .18s both}
+ html.motion-enabled:not(.reading-mode) .impact.is-motion-seen .impact-number{animation:im-impact 1.1s .15s both}
+ html.motion-enabled:not(.reading-mode) .impact.is-motion-seen .impact-symbol{animation:im-symbol 1.45s cubic-bezier(.2,.8,.3,1) both}
+ html.motion-enabled:not(.reading-mode) .capabilities.is-motion-seen .capability-list article{animation:im-label .65s both}
+ html.motion-enabled:not(.reading-mode) .capabilities.is-motion-seen .capability-list article:nth-child(2){animation-delay:.13s}
+ html.motion-enabled:not(.reading-mode) .capabilities.is-motion-seen .capability-list article:nth-child(3){animation-delay:.25s}
+ html.motion-enabled:not(.reading-mode) .education.is-motion-seen .education-entries article{animation:im-label .7s both}
+ html.motion-enabled:not(.reading-mode) .contact.is-motion-seen .contact-inner h2{animation:im-type .9s both}
+ html.motion-enabled:not(.reading-mode) .replay-intro>span{transition:transform .35s cubic-bezier(.22,1,.36,1)}
+ html.motion-enabled:not(.reading-mode) .replay-intro:hover>span{transform:scale(1.13)}
+ @keyframes im-marquee{to{transform:translate3d(-50%,0,0)}}
+ @keyframes im-grid{0%{background-position:0 0}100%{background-position:24px 20px}}
+ @keyframes im-ring{0%{transform:rotate(-12deg) translate3d(0,0,0) scale(1)}100%{transform:rotate(7deg) translate3d(9px,-13px,0) scale(1.045)}}
+ @keyframes im-monogram{0%{transform:translate3d(-8px,6px,0) scaleX(.9)}100%{transform:translate3d(8px,-12px,0) scaleX(.92)}}
+ @keyframes im-star{0%{transform:rotate(-12deg) scale(.9);opacity:.72}100%{transform:rotate(18deg) scale(1.12);opacity:1}}
+ @keyframes im-cut{0%{transform:translate3d(-3%,0,0) rotate(-26deg)}100%{transform:translate3d(3%,0,0) rotate(-26deg)}}
+ @keyframes im-rule{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+ @keyframes im-type{from{clip-path:inset(0 0 100% 0);transform:translate3d(0,30px,0);opacity:.3}to{clip-path:inset(0);transform:none;opacity:1}}
+ @keyframes im-reveal-art{from{clip-path:inset(0 100% 0 0);filter:brightness(1.7)}to{clip-path:inset(0);filter:none}}
+ @keyframes im-label{from{opacity:0;transform:translate3d(0,17px,0)}to{opacity:1;transform:none}}
+ @keyframes im-flow{from{opacity:0;transform:scaleX(.78)}to{opacity:1;transform:scaleX(1)}}
+ @keyframes im-metric{from{opacity:0;transform:translate3d(0,25px,0) scale(.9)}to{opacity:1;transform:none}}
+ @keyframes im-window{from{transform:rotate(-9deg) translate3d(20px,25px,0);opacity:.4}to{transform:rotate(-4deg);opacity:1}}
+ @keyframes im-impact{from{opacity:0;transform:scale(.76) translate3d(-45px,0,0)}to{opacity:1;transform:none}}
+ @keyframes im-symbol{from{transform:rotate(-75deg) scale(.7);opacity:.2}to{transform:rotate(0) scale(1);opacity:1}}
+}
+@media (max-width:650px){
+ .hero-ticker{flex-wrap:nowrap!important}
+ .ticker-set{padding:12px 25px;gap:30px}
+ .ticker-set span{font-size:10px!important}
+ .hero-actions{gap:10px 14px}
+ .replay-intro{font-size:9px;min-height:40px}
+ .replay-intro>span{width:22px;height:22px}
+}
+/* Off means OFF, not merely hiding the controls. */
+html.motion-disabled .ticker-track,html.motion-disabled .poster-grid,html.motion-disabled .poster-ring,html.motion-disabled .poster-monogram,html.motion-disabled .poster-star,html.motion-disabled .poster-cut{animation:none!important}
+html.motion-disabled .scene>.section-header::before{transform:scaleX(0)}
+@media(prefers-reduced-motion:reduce){.ticker-track,.poster-grid,.poster-ring,.poster-monogram,.poster-star,.poster-cut{animation:none!important}}
+@media print{.replay-intro{display:none!important}.ticker-track{animation:none!important}.scene>.section-header::before{display:none!important}}
