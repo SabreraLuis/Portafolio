@@ -55,3 +55,38 @@ html.motion-disabled *,html.motion-disabled *::before,html.motion-disabled *::af
   .impact-number{font-size:clamp(100px,28.5vw,120px)}
 }
 @media screen and (max-width:380px){.impact-head h2{font-size:clamp(49px,15.8vw,59px)}}
+/* Printer-first CV: compress cinematic pacing, retain every professional fact. */
+@media print{
+  .section-header,.manifesto-copy .cinematic-heading,.work-heading,.impact-head,.capabilities-heading h2,.education-grid h2,.contact-inner h2,.hero-meta,.hero-tagline{display:none!important}
+  .hero-title{font-size:32pt!important;line-height:.85!important}
+  .hero-title .mask{display:inline-block;overflow:visible;margin-right:8pt}
+  .hero-title .mask:nth-child(2)>span{font-size:.85em}
+  .hero-title-area{padding:0!important;margin:0!important}
+  .hero-intro{padding:2mm 0!important;margin:0!important}
+  .scene{padding:2.7mm 0!important}
+  .manifesto-main,.manifesto-text,.capabilities-layout,.education-grid{margin:0!important}
+  .manifesto-text{columns:2;column-gap:8mm;padding:0!important}
+  .manifesto-text .manifesto-lead{font-size:9pt;line-height:1.25}
+  .manifesto-text div p{font-size:7.5pt;line-height:1.28;margin:0 0 1mm}
+  .case{padding:2.4mm 0!important;page-break-inside:avoid}
+  .case-main{margin:0!important;gap:0!important}
+  .case h3{font-size:17pt!important;margin:1mm 0!important;letter-spacing:0}
+  .case-category{margin:1mm 0;font-size:7pt}
+  .case-role{font-size:8pt;margin:1mm 0}
+  .case-summary{font-size:7.5pt!important;line-height:1.25;margin:0!important}
+  .case-number{font-size:7pt;padding:0!important}
+  .case-more>p{font-size:7.5pt!important;line-height:1.25;margin:1mm 0!important}
+  .impact-primary{padding:0!important}
+  .impact-number{font-size:27pt!important;margin:0!important}
+  .impact-primary p{font-size:8pt}
+  .impact-secondary strong{font-size:22pt!important}
+  .impact-metrics{margin:1mm 0!important}
+  .impact-foot{font-size:7pt;margin:0!important}
+  .capabilities-heading>p:last-child{display:none}
+  .capability-list article,.education-entries article{padding:1.7mm 0!important}
+  .capability-list h3,.education-entries h3{font-size:13pt!important;margin:1mm 0!important}
+  .capability-list p,.education-entries p{font-size:7.5pt!important;line-height:1.25}
+  .contact-inner,.contact-content{margin:0!important;padding:0!important}
+  .contact-inner>.overline{display:none}
+  .contact-foot{margin:1mm 0}
+}
