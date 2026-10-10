@@ -442,3 +442,12 @@ html.visibility-paused .fx-aurora,html.visibility-paused .fx-scanline,html.visib
 
 /* WCAG AA for dark-background micro-labels: 7.64:1 on #101113. */
 .discipline-heading .mono,.development-perspective .mono{color:#ff7e75}
+
+/* Cross-browser responsive safeguard discovered by GitHub Chromium CI (768px).
+   Preserve editorial cards with a wider two-column tablet reticle. */
+@media (min-width:701px) and (max-width:1280px){
+  .discipline-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .discipline-card:nth-child(3){grid-column:1/-1}
+  .discipline-card h4{font-size:clamp(37px,4.2vw,55px)}
+}
+@media (min-width:1281px){.discipline-card h4{font-size:clamp(42px,3.85vw,68px)}}
