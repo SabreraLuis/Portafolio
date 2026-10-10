@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#eae7e0"><meta name="description" content="Luis Alberto Sabrera Espinoza. Comunicación, marketing B2B/B2C, performance y diseño de producto. Portafolio profesional, Lima, Perú.">
+<meta property="og:title" content="Luis Sabrera — Comunicación que mueve negocios"><meta property="og:type" content="website"><meta property="og:description" content="Trayectoria profesional en branding, performance, CRM y UX/UI.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* INK / IMPACT / 04 — Editorial design system.
+   Mass • Hierarchy • White space • Typography • Controlled motion.
+   Visual design original. No copied anime assets or compositions. */
+:root{--paper:#eae7e0;--paper-deep:#d8d4cc;--black:#111110;--white:#f7f5ef;--accent:#db4b3c;--text-muted:#57524c;--line:rgba(17,17,16,.29);--line-inverse:rgba(247,245,239,.37);--gutter:clamp(20px,5vw,90px);--display:'Barlow Condensed',Impact,'Arial Narrow',sans-serif;--body:'DM Sans',Arial,sans-serif;--mono:'IBM Plex Mono',monospace;--ease:cubic-bezier(.19,1,.22,1)}
+*,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}body{margin:0;background:var(--paper);color:var(--black);font-family:var(--body);font-size:16px;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button{color:inherit;font:inherit;cursor:pointer}a,button{outline-offset:5px}a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:4px}::selection{background:var(--accent);color:var(--black)}.mono{font:500 10px/1.6 var(--mono);letter-spacing:.055em}.skip{position:fixed;z-index:200;top:10px;left:10px;background:var(--black);color:var(--white);padding:15px 24px;transform:translateY(-200%)}.skip:focus{transform:none}.sr-only{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;clip-path:inset(50%)!important}.read-rail{position:fixed;top:0;left:0;right:0;height:3px;z-index:100;pointer-events:none}.read-rail>div{height:100%;width:0;background:var(--accent)}
+.site-header{position:relative;z-index:90;height:85px;display:flex;justify-content:space-between;align-items:center;gap:30px;padding:12px var(--gutter);background:var(--paper);border-bottom:1px solid var(--black)}.brand{display:flex;gap:13px;align-items:center}.brand>b{display:grid;place-items:center;width:48px;height:48px;background:var(--black);color:var(--white);font:900 29px/.85 var(--display)}.brand>b span{color:var(--accent)}.brand>span{font:600 10px/1.5 var(--mono)}.nav{display:flex;align-items:center;gap:clamp(14px,2.3vw,48px)}.nav>a{font:600 10px/1.35 var(--mono);position:relative;padding:13px 0}.nav>a:not(.nav-cta)::after{content:'';position:absolute;bottom:8px;left:0;right:100%;height:2px;background:currentColor;transition:right .28s var(--ease)}.nav>a:not(.nav-cta):hover::after,.nav>a[aria-current]::after{right:0}.nav .nav-cta{background:var(--black);color:var(--white);padding:16px 20px}.nav-cta:hover{background:var(--accent);color:var(--black)}.nav-toggle{display:none;background:transparent;border:1px solid var(--black);padding:11px 14px;min-height:44px;font:600 12px var(--mono)}
+.hero{overflow:clip}.hero-grid{display:grid;grid-template-columns:minmax(0,68%) minmax(0,32%);min-height:min(760px,calc(100svh - 85px))}.hero-type{min-width:0;display:flex;flex-direction:column;padding:25px clamp(28px,3.8vw,70px) 22px var(--gutter)}.eyebrow{display:flex;justify-content:space-between;gap:18px;color:#433e3a}.hero-central{margin:auto 0;position:relative;min-width:0;padding:40px 0}.hero-kicker{font:600 clamp(9px,1vw,13px)/1.5 var(--mono);margin:0 0 clamp(18px,2vw,34px);letter-spacing:.13em}.hero h1{font:900 clamp(90px,15.5vw,275px)/.73 var(--display);letter-spacing:-.049em;margin:0 0 24px;white-space:nowrap}.hero h1>span{display:block;transform-origin:left center}.hero h1>span:nth-child(2){font-size:.728em;line-height:.9}.hero h1 i{font-style:normal;color:var(--accent)}.hero-baseline{font-size:clamp(14px,1.3vw,20px);line-height:1.5;margin:27px 0 0;max-width:520px}.hero-baseline strong{font-weight:700}.hero-floor{display:flex;justify-content:space-between;align-items:end;gap:15px;border-top:1px solid var(--black);padding-top:14px}.underlink{font:600 12px var(--mono);padding:0 0 9px;border-bottom:2px solid var(--black);white-space:nowrap}.underlink:hover{border-color:var(--accent)}.underlink span{margin-left:18px;font:20px var(--body)}.hero-floor>span{color:#5c564e;text-align:right}
+.hero-poster{background:var(--black);color:var(--white);display:flex;flex-direction:column;position:relative;isolation:isolate;overflow:hidden;padding:25px clamp(20px,2.8vw,46px)}.poster-head,.poster-foot{display:flex;justify-content:space-between;gap:15px;border-bottom:1px solid var(--line-inverse);padding-bottom:15px;position:relative;z-index:2}.poster-foot{border-top:1px solid var(--line-inverse);border-bottom:0;padding:16px 0 0}.poster-field{min-height:360px;position:relative;flex:1;isolation:isolate}.poster-field::before{content:'';position:absolute;inset:8% 4%;border:1px solid rgba(247,245,239,.15)}.poster-field::after{content:'';position:absolute;left:4%;right:4%;top:51%;height:1px;background:rgba(247,245,239,.12)}.poster-caption{position:absolute;left:7%;top:15%;font:700 clamp(13px,1.2vw,19px)/1.1 var(--display);letter-spacing:.21em;writing-mode:vertical-rl;z-index:3}.poster-four{position:absolute;left:4%;top:50%;transform:translateY(-53%) skewY(-9deg);font:900 clamp(220px,28vw,560px)/.85 var(--display);letter-spacing:-.13em;color:var(--accent);white-space:nowrap;z-index:2;user-select:none}.poster-notch{position:absolute;left:-70%;right:-70%;top:58%;height:clamp(13px,1.65vw,24px);transform:rotate(-26deg);background:var(--paper);z-index:3}.poster-line-a,.poster-line-b{position:absolute;height:1px;background:rgba(255,255,255,.29);width:250%;left:-65%;transform:rotate(-26deg);z-index:1}.poster-line-a{top:49%}.poster-line-b{top:70%}.poster-side{position:absolute;bottom:11%;right:0;writing-mode:vertical-rl;color:#c9c3bc;letter-spacing:.12em;font-size:8px;z-index:4}.hero-newsbar{min-height:58px;background:var(--accent);padding:12px var(--gutter);display:flex;gap:18px;justify-content:space-between;align-items:center;font-weight:600;flex-wrap:wrap}
+.section{padding:clamp(80px,9vw,150px) var(--gutter)}.section-rail{display:grid;grid-template-columns:42px 1fr auto;gap:14px;padding:15px 0 0;border-top:1px solid var(--black);font-weight:600}.section-rail>span:last-child{text-align:right}.light-rail{border-color:var(--line-inverse)}.display-head{font:900 clamp(70px,10vw,178px)/.86 var(--display);letter-spacing:-.032em;margin:0}.display-head em{font-style:normal;-webkit-text-stroke:1.5px var(--black);color:transparent}.display-head .red-dot,.display-head>span{color:var(--accent)}.display-head .outlined{color:transparent;-webkit-text-stroke:1.5px var(--black)}
+.about-grid{display:grid;grid-template-columns:13% minmax(0,1fr);gap:4%;padding-top:clamp(70px,9vw,160px)}.about-index{display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;color:var(--text-muted)}.index-star{font:80px/1 var(--body);color:var(--accent)}.about .display-head{font-size:clamp(67px,9.2vw,170px)}.about-description{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,90px);border-top:1px solid var(--black);padding:30px 0 0;margin-top:clamp(65px,7vw,105px)}.featured{margin:0;font-size:clamp(21px,2.2vw,36px);line-height:1.25;letter-spacing:-.035em;font-weight:600}.about-prose p{font-size:15px;line-height:1.8;max-width:570px;margin:0 0 17px;color:#35312c}
+.visual-cut{background:var(--accent);color:var(--black);padding:clamp(45px,5vw,90px) var(--gutter) 22px;overflow:hidden;position:relative;isolation:isolate}.visual-cut::before{content:'';position:absolute;width:46%;height:12px;left:-10%;top:38%;background:var(--paper);transform:rotate(-14deg);z-index:0}.cut-inner{position:relative;z-index:1;display:flex;flex-direction:column;line-height:.75;font:900 clamp(115px,18vw,335px)/.8 var(--display);letter-spacing:-.05em}.cut-inner span{display:block;white-space:nowrap}.cut-inner span:nth-child(2){align-self:center;color:transparent;-webkit-text-stroke:2px var(--black)}.cut-inner span:nth-child(3){align-self:flex-end}.cut-caption{position:relative;z-index:1;border-top:1px solid var(--black);padding-top:15px;text-align:right;margin-top:50px}
+.work{background:var(--black);color:var(--white)}.work-intro{padding:clamp(70px,8vw,126px) 0 60px;display:flex;align-items:end;justify-content:space-between;gap:50px}.work-intro h2{font-size:clamp(83px,11vw,205px)}.work-intro h2 span{color:var(--accent)}.work-intro p{max-width:340px;margin:0 0 11px;color:#c5bfb6;font-size:15px;line-height:1.6}.work-layout{display:grid;grid-template-columns:32% minmax(0,1fr);gap:7%;border-top:1px solid #77716a}.work-monitor{position:relative}.work-monitor-inner{position:sticky;top:12vh;height:75vh;max-height:680px;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;padding:40px 0 45px}.monitor-kicker{color:#bbb4aa}.monitor-number{font:900 clamp(140px,22vw,390px)/.75 var(--display);letter-spacing:-.08em;white-space:nowrap}.monitor-number>span{color:var(--accent)}.monitor-bottom{display:flex;flex-direction:column;gap:28px;width:min(100%,340px)}.monitor-bottom>span{color:var(--accent);min-height:18px}.monitor-bars{display:flex;gap:6px}.monitor-bars i{display:block;flex:1;height:3px;background:#77716a;transition:background .4s ease}.monitor-bars i.active{background:var(--accent)}.work-cases{border-left:1px solid #706b64;padding-left:clamp(26px,5vw,86px)}.case{min-height:clamp(520px,75vh,710px);padding:clamp(45px,6vw,100px) 0;display:flex;flex-direction:column;justify-content:center;border-bottom:1px solid #77716a;scroll-margin-top:80px}.case-eyebrow{display:flex;justify-content:space-between;gap:22px;color:var(--accent);font-weight:600}.case-eyebrow time{color:#aaa49a;white-space:nowrap}.case h3{font:900 clamp(68px,8vw,155px)/.82 var(--display);letter-spacing:-.026em;margin:36px 0 25px}.case h3>span{color:var(--accent)}.case-position{font-weight:700!important;color:var(--white)!important;font-size:16px!important;line-height:1.4!important;margin-bottom:20px!important}.case p:not(.case-position){font-size:15px;line-height:1.78;color:#c4bdb3;max-width:570px;margin:0 0 25px}.case p strong{color:#fff}.case-end{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-top:25px;border-top:1px solid #565149;padding-top:17px;color:var(--accent)}.case-end span:last-child{font:24px var(--body)}
+.evidence{background:var(--accent);padding:75px var(--gutter)}.evidence-head{display:grid;grid-template-columns:220px 1fr;gap:50px;padding:clamp(60px,8vw,145px) 0}.evidence-head p{margin:10px 0 0}.evidence-head h2{font:900 clamp(76px,10vw,185px)/.84 var(--display);letter-spacing:-.025em;margin:0}.evidence-head h2 span{color:var(--paper)}.metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px;border-top:1px solid var(--black)}.metrics article{padding:25px 35px 0 0;border-right:1px solid rgba(0,0,0,.34)}.metrics article:last-child{border:0}.metrics strong{display:block;font:900 clamp(90px,11vw,190px)/1 var(--display);letter-spacing:-.048em;margin:30px 0 14px;white-space:nowrap}.metrics strong sup{font-size:.45em}.metrics p{max-width:380px;font-size:15px;line-height:1.6;margin:0 0 10px}.evidence-note{border-top:1px solid var(--black);margin:65px 0 0;padding-top:15px}
+.expertise-layout{display:grid;grid-template-columns:44% 1fr;gap:8%;padding-top:clamp(75px,8vw,130px)}.expertise .display-head{font-size:clamp(87px,9vw,168px)}.expertise-circle{color:var(--accent);font-size:clamp(65px,8vw,135px);line-height:1;margin-top:70px}.expertise-list{border-top:1px solid var(--black)}.expertise-list article{border-bottom:1px solid var(--line);padding:34px 0 39px;display:grid;grid-template-columns:100px minmax(0,1fr);gap:20px}.expertise-list article>span{color:#a22d23;padding-top:6px;font-size:10px}.expertise-list h3{font:900 clamp(29px,3vw,55px)/.95 var(--display);margin:0 0 18px}.expertise-list p{margin:0;font-size:15px;line-height:1.7;color:var(--text-muted);max-width:550px}
+.education{padding-top:50px}.education-layout{display:grid;grid-template-columns:43% 1fr;gap:9%;padding-top:clamp(65px,7vw,120px)}.education h2{font-size:clamp(74px,8.7vw,155px)}.education h2 span{color:var(--accent)}.school-list{border-top:1px solid var(--black)}.school-list article{display:grid;grid-template-columns:65px 1fr;gap:20px;border-bottom:1px solid var(--line);padding:23px 0 29px}.school-list time{color:#a22d23}.school-list h3{font:800 clamp(23px,2.5vw,42px)/.97 var(--display);margin:0 0 13px}.school-list p{font-size:14px;color:var(--text-muted);line-height:1.5;margin:0}
+.contact{padding:clamp(60px,7vw,120px) var(--gutter);background:var(--black);color:var(--white)}.contact-stage{padding:clamp(90px,11vw,190px) 0 0}.contact-stage>p{color:var(--accent);margin:0 0 22px}.contact h2{font:900 clamp(140px,23vw,410px)/.75 var(--display);letter-spacing:-.055em;margin:0}.contact h2 span{color:var(--accent)}.contact-actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:clamp(60px,7vw,100px)}.contact-actions a,.contact-actions button{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:19px 24px;min-height:58px;border:1px solid #77716a;background:transparent;color:var(--white);font:600 12px/1.3 var(--mono)}.contact-actions a{background:var(--accent);border-color:var(--accent);color:var(--black)}.contact-actions a:hover{background:var(--paper);border-color:var(--paper)}.contact-actions button:hover{border-color:var(--accent);color:var(--accent)}.contact-info{display:flex;flex-wrap:wrap;gap:20px 45px;margin-top:clamp(75px,9vw,150px);padding-top:25px;border-top:1px solid var(--line-inverse)}.contact-info a:hover{color:var(--accent)}.footer{padding:24px var(--gutter);background:#080807;color:#c1bab0;display:flex;justify-content:space-between;gap:20px}.footer a:hover{color:var(--accent)}.motion-control{position:fixed;z-index:80;bottom:17px;right:17px;padding:11px 13px;min-height:44px;border:1px solid #77716a;color:#e9e7e2;background:var(--black);font-weight:600;font-size:10px;box-shadow:3px 3px 0 var(--accent)}.motion-control:hover{background:#3c332f}.motion-control-mark{color:var(--accent)}.motion-control[aria-pressed=false]{opacity:.7}
+/* Entry, diagram and interaction: pure transform/opacity when appropriate. */
+@media(prefers-reduced-motion:no-preference){
+.hero-title-reveal{animation:title-rise .85s var(--ease) both}.hero-title-reveal:nth-child(2){animation-delay:.12s}.poster-notch{animation:slash-in 1s var(--ease) .35s both}.poster-four{animation:figure-in 1.3s var(--ease) .15s both}.poster-caption{animation:caption-in .7s var(--ease) .45s both}
+@keyframes title-rise{from{clip-path:inset(100% 0 0);opacity:.2;transform:translateY(14%)}to{clip-path:inset(0 0 0);opacity:1;transform:none}}
+@keyframes slash-in{from{opacity:0;transform:rotate(-26deg) translateX(-25%)}to{opacity:1;transform:rotate(-26deg) translateX(0)}}
+@keyframes figure-in{from{opacity:0;transform:translateY(-50%) skewY(-9deg) scale(1.07)}to{opacity:1;transform:translateY(-53%) skewY(-9deg) scale(1)}}
+@keyframes caption-in{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}
+.work-monitor-inner .monitor-number{transition:opacity .2s var(--ease)}.case h3{transition:color .25s var(--ease)}.case:hover h3{color:#fff}.case:hover h3 span{color:var(--accent)}
+[data-reveal]{transition:opacity .75s var(--ease),translate .75s var(--ease)}.can-reveal [data-reveal]:not(.is-visible){opacity:.26;translate:0 26px}.can-reveal [data-reveal].is-visible{opacity:1;translate:0 0}
+.hero-poster{--mx:0px;--my:0px}.poster-four{transform:translate(var(--mx),calc(-53% + var(--my))) skewY(-9deg);transition:transform .3s ease}
+/* Scroll-linked motion only where implemented; unsupported browsers keep a fixed typographic plate. */
+@supports(animation-timeline:view()){
+ .cut-inner{animation:cut-translate linear both;animation-timeline:view();animation-range:entry 0% exit 100%}
+ @keyframes cut-translate{0%{transform:translateY(8%)}60%{transform:translateY(0)}100%{transform:translateY(-7%)}}
+}
+}
+@media(max-width:1180px){.nav{gap:16px}.hero h1{font-size:15.4vw}.poster-four{font-size:30vw}.work-layout{grid-template-columns:29% 1fr;gap:5%}.work-cases{padding-left:3vw}.monitor-number{font-size:20vw}.case h3{font-size:7.5vw}.evidence-head h2{font-size:9vw}.expertise .display-head{font-size:8vw}}
+@media(max-width:950px){.site-header{height:72px}.nav-toggle{display:block}.nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--black);padding:15px var(--gutter) 26px;flex-direction:column;align-items:stretch;gap:0}.nav.open{display:flex}.nav>a{padding:18px 0;border-bottom:1px solid var(--line)}.nav .nav-cta{margin-top:10px;padding:18px}.hero-grid{grid-template-columns:65% 35%;min-height:650px}.hero h1{font-size:15vw}.poster-four{font-size:34vw}.hero-floor>span{display:none}.about-grid{grid-template-columns:8% 1fr}.about .display-head{font-size:9.4vw}.work-intro{flex-direction:column;align-items:flex-start;gap:20px}.work-intro h2{font-size:11vw}.work-monitor-inner{height:60vh}.metrics{gap:10px}.metrics article{padding-right:12px}.metrics strong{font-size:10vw}.expertise-layout,.education-layout{grid-template-columns:1fr;gap:50px}.expertise .display-head{font-size:12vw}.education h2{font-size:13vw}.evidence-head{grid-template-columns:1fr;gap:28px}.evidence-head h2{font-size:12vw}.contact h2{font-size:21vw}}
+@media(max-width:700px){html{scroll-padding-top:73px}.site-header{padding-block:12px}.brand>b{width:44px;height:44px}.brand>span{font-size:9px}.hero-grid{display:block;min-height:0}.hero-type{padding:17px var(--gutter) 0}.hero-central{padding:clamp(65px,13vw,120px) 0 clamp(55px,10vw,90px)}.hero-kicker{font-size:9px;letter-spacing:.04em}.hero h1{font-size:clamp(86px,22vw,151px);margin-bottom:20px}.hero h1>span:nth-child(2){font-size:.73em}.hero-baseline{font-size:15px;margin-top:20px}.hero-floor{padding:17px 0 24px}.hero-poster{min-height:300px;height:clamp(280px,65vw,410px);padding:18px var(--gutter)}.poster-field{min-height:0}.poster-four{font-size:clamp(260px,64vw,460px);top:50%;left:21%}.poster-caption{font-size:16px;writing-mode:horizontal-tb;top:14%;left:5%}.poster-notch{height:13px}.hero-newsbar{justify-content:flex-start;gap:8px 20px;padding-block:20px;font-size:9px}.hero-newsbar span:nth-child(even){display:none}.hero-newsbar span:nth-child(odd){border-right:1px solid var(--black);padding-right:15px}.hero-newsbar span:last-child{border:0}.section{padding:75px var(--gutter)}.section-rail{grid-template-columns:24px 1fr auto;gap:7px;font-size:9px}.section-rail>span:last-child{font-size:8px}.about-grid{display:block;padding-top:58px}.about-index{display:none}.about .display-head{font-size:clamp(56px,12.5vw,96px)}.about-description{display:block;margin-top:45px}.featured{font-size:23px;margin:0 0 25px}.about-prose p{font-size:15px}.visual-cut{padding-top:50px}.cut-inner{font-size:clamp(90px,22vw,160px)}.cut-inner span:nth-child(2){align-self:flex-start;padding-left:6vw}.cut-inner span:nth-child(3){align-self:flex-start;padding-left:11vw}.cut-caption{font-size:9px;margin-top:40px}.work-intro{padding:68px 0 40px}.work-intro h2{font-size:clamp(72px,15vw,110px)}.work-intro p{max-width:500px}.work-layout{display:block}.work-monitor{display:none}.work-cases{padding:0;border:0}.case{min-height:0;padding:45px 0}.case-eyebrow{flex-wrap:wrap;font-size:9px;gap:7px}.case h3{font-size:clamp(66px,14vw,110px);margin:30px 0 18px}.case-position{font-size:14px!important}.case p:not(.case-position){font-size:14px;line-height:1.7}.evidence{padding:65px var(--gutter)}.evidence-head{padding:60px 0}.evidence-head h2{font-size:clamp(65px,13vw,110px)}.metrics{grid-template-columns:1fr;gap:0}.metrics article{border:0;border-bottom:1px solid var(--black);padding:25px 0}.metrics strong{font-size:clamp(108px,26vw,195px);margin:12px 0}.metrics p{font-size:14px}.evidence-note{margin-top:50px;font-size:9px}.expertise-layout{padding-top:65px}.expertise .display-head{font-size:clamp(77px,16vw,128px)}.expertise-circle{display:none}.expertise-list article{display:block}.expertise-list article>span{display:block;margin-bottom:13px}.expertise-list h3{font-size:36px}.expertise-list p{font-size:14px}.education h2{font-size:clamp(70px,15vw,122px)}.school-list article{gap:13px;grid-template-columns:50px 1fr}.school-list h3{font-size:27px}.contact{padding:65px var(--gutter) 120px}.contact-stage{padding:90px 0 0}.contact h2{font-size:clamp(80px,21vw,145px)}.contact-actions{flex-direction:column;align-items:stretch}.contact-actions>a,.contact-actions>button{width:100%}.contact-info{flex-direction:column;gap:12px;margin-top:75px}.footer{font-size:9px;flex-wrap:wrap}.footer span:nth-child(2){display:none}.motion-control{font-size:9px;bottom:10px;right:10px;min-height:42px}}
+@media(max-width:370px){.hero h1{font-size:21vw}.about .display-head{font-size:12vw}.work-intro h2{font-size:14vw}.case h3{font-size:13vw}.evidence-head h2{font-size:12.8vw}.expertise .display-head{font-size:15vw}.education h2{font-size:14.3vw}.contact h2{font-size:20vw}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.can-reveal [data-reveal]{opacity:1!important;translate:none!important}.cut-inner{animation:none!important}}
+html.no-motion *:not(.read-rail>div),html.no-motion *::before,html.no-motion *::after{animation:none!important;transition:none!important}html.no-motion{scroll-behavior:auto!important}html.no-motion .can-reveal [data-reveal]{opacity:1!important;translate:none!important}
+@media print{@page{size:A4;margin:13mm}body{background:white;color:black;font-size:10pt}.site-header,.read-rail,.motion-control,.hero-poster,.hero-newsbar,.hero-floor,.visual-cut,.poster-field,.skip,.footer{display:none!important}.hero-grid,.about-grid,.about-description,.work-layout,.evidence-head,.metrics,.expertise-layout,.education-layout{display:block!important}.hero-type,.section,.evidence,.contact{background:white!important;color:black!important;padding:7mm 0!important}.hero-central{padding:0}.hero h1{font-size:48pt!important}.hero h1 i,.display-head>span,.display-head .red-dot,.case h3 span,.contact h2 span{color:black!important}.hero-baseline{margin:4mm 0}.display-head,.about .display-head,.expertise .display-head,.education h2,.work-intro h2,.contact h2{font-size:29pt!important;color:black!important;line-height:1!important;margin:4mm 0}.display-head em,.outlined{-webkit-text-stroke:0!important;color:black!important}.about-description{padding:4mm 0}.about-description p,.case p,.expertise-list p,.metrics p{font-size:9pt!important;line-height:1.45!important;color:black!important}.chapter,.section-rail{border-color:black;color:black!important}.work-intro{padding:6mm 0}.work-monitor{display:none}.work-cases{border:0;padding:0}.case{break-inside:avoid;min-height:0;padding:6mm 0;border-color:#999}.case h3{font-size:23pt!important;margin:3mm 0}.case-eyebrow,.case-position,.case-end{color:black!important}.evidence-head{padding:4mm 0}.metrics article{break-inside:avoid;border:0;border-bottom:1px solid #bbb;padding:3mm 0}.metrics strong{font-size:35pt!important;margin:0}.evidence-note{margin:5mm 0}.expertise-list article,.school-list article{break-inside:avoid;padding:4mm 0}.expertise-list h3,.school-list h3{font-size:16pt}.contact-stage{padding:0}.contact h2{font-size:34pt!important}.contact-actions{display:none}.contact-info{color:black;margin:4mm 0;display:block}.contact-info a{color:black!important;display:block}.can-reveal [data-reveal]{opacity:1!important;translate:0!important}}
+
+</style>
+<title>Luis Sabrera — Portfolio / 04</title>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a><div class="read-rail" aria-hidden="true"><div id="read-progress"></div></div>
+<header class="site-header" id="top">
+<a href="#top" class="brand" aria-label="Luis Sabrera, inicio"><b>LS<span>.</span></b><span>LUIS SABRERA<br>PORTFOLIO / 2026</span></a>
+<button class="nav-toggle" id="nav-toggle" type="button" aria-controls="navigation" aria-expanded="false">MENÚ <span aria-hidden="true">+</span></button>
+<nav id="navigation" class="nav" aria-label="Navegación principal"><a href="#about">PERFIL</a><a href="#work">EXPERIENCIA</a><a href="#expertise">ESPECIALIDADES</a><a href="#education">FORMACIÓN</a><a href="#contact" class="nav-cta">CONTACTO ↗</a></nav>
+</header>
+<main id="main">
+<section class="hero" aria-labelledby="hero-name">
+<div class="hero-grid">
+<div class="hero-type">
+<div class="eyebrow mono"><span>EDICIÓN PROFESIONAL / 001</span><span>LIMA — PERÚ</span></div>
+<div class="hero-central"><p class="hero-kicker mono">COMUNICACIÓN + ESTRATEGIA + PRODUCTO</p><h1 id="hero-name"><span class="hero-title-reveal">LUIS</span><span class="hero-title-reveal">SABRERA<i>.</i></span></h1><p class="hero-baseline">Conecto marcas, personas y datos<br>para transformar <strong>ideas en resultados.</strong></p></div>
+<div class="hero-floor"><a href="#work" class="underlink">EXPLORAR TRAYECTORIA <span>↘</span></a><span class="mono">DESLIZA PARA DESCUBRIR ↓</span></div>
+</div>
+<div class="hero-poster" aria-label="Composición tipográfica original, número cero cuatro, a modo de portada editorial">
+<div class="poster-head mono"><span>VISUAL ARCHIVE</span><span>LS / 04</span></div>
+<div class="poster-field" aria-hidden="true"><span class="poster-caption">COMUNICACIÓN<br>EN MOVIMIENTO</span><span class="poster-four">04</span><div class="poster-notch"></div><span class="poster-line-a"></span><span class="poster-line-b"></span><span class="poster-side mono">DIRECCIÓN / INTENCIÓN / RESULTADO</span></div>
+<div class="poster-foot mono"><span>ISSUE Nº 004</span><span>EST. 2026</span></div>
+</div></div>
+<div class="hero-newsbar mono"><span>ESTRATEGIA COMERCIAL</span><span>×</span><span>PERFORMANCE</span><span>×</span><span>BRANDING</span><span>×</span><span>PRODUCT DESIGN</span></div>
+</section>
+<section id="about" class="section about" aria-labelledby="about-title">
+<div class="section-rail mono"><span>01 — PERFIL</span><span>EL PUNTO DE PARTIDA</span><span>[ 01 / 06 ]</span></div>
+<div class="about-grid"><div class="about-index mono"><span>DESDE LA IDEA<br>HASTA LA EJECUCIÓN</span><span class="index-star" aria-hidden="true">✳</span></div><div class="about-body"><h2 id="about-title" class="display-head" data-reveal>LA FORMA<br>IMPORTA<span class="outlined">.</span><br><em>EL FONDO</em><br>DECIDE<span class="red-dot">.</span></h2><div class="about-description"><p class="featured" data-reveal>Una visión de comunicación donde creatividad, negocio y análisis se encuentran.</p><div class="about-prose" data-reveal><p>Bachiller en Ciencias de la Comunicación con más de cuatro años de experiencia en marketing digital, branding, performance y estrategia comercial.</p><p>Experiencia en entornos B2B/B2C, generación y seguimiento de leads, campañas pagadas, CRM, presupuestos y coordinación con equipos comerciales y creativos. He trabajado con empresas de software ERP, industria y productos digitales.</p></div></div></div></div>
+</section>
+<div class="visual-cut" aria-hidden="true"><div class="cut-inner"><span>OBSERVAR</span><span>INTERPRETAR</span><span>ACTUAR</span></div><div class="cut-caption mono">UNA IDEA NO ES UN RESULTADO. / ES EL INICIO DE UN PROCESO.</div></div>
+<section id="work" class="section work" aria-labelledby="work-title"><div class="section-rail mono light-rail"><span>02 — EXPERIENCIA</span><span>SELECCIÓN PROFESIONAL</span><span>[ 02 / 06 ]</span></div>
+<div class="work-intro"><h2 id="work-title" class="display-head" data-reveal>EL TRABAJO<br><span>HABLA.</span></h2><p>Experiencias en marketing, comunicación institucional, estrategia digital y diseño de producto. Cuatro contextos, una perspectiva integral.</p></div>
+<div class="work-layout">
+<aside class="work-monitor" aria-label="Índice de experiencias"><div class="work-monitor-inner"><span class="mono monitor-kicker">ARCHIVO DE EXPERIENCIAS / 04</span><span class="monitor-number" id="monitor-number" aria-hidden="true">01<span>.</span></span><div class="monitor-bottom"><span id="monitor-category" class="mono">PERFORMANCE / CRM</span><div class="monitor-bars" aria-hidden="true"><i class="active"></i><i></i><i></i><i></i></div></div></div></aside>
+<div class="work-cases">
+<article class="case" data-case="01" data-category="PERFORMANCE / CRM"><div class="case-eyebrow mono"><span>01 / 04 — PERFORMANCE</span><time>2026 — ACTUALIDAD</time></div><h3 data-reveal>AMAZON<br>MAGIC PARK<span>.</span></h3><p class="case-position">Marketing & Performance — CRM, Leads y Estrategia Comercial</p><p>Planificación y seguimiento de campañas digitales en TikTok Ads y Meta Ads; control de inversión, análisis de leads, buyer personas y funnel, reportes de performance y coordinación con asesores comerciales. Apoyo en medición con Google Tag Manager y Meta Pixel.</p><div class="case-end mono"><span>PAID MEDIA / LEADS / FUNNEL</span><span>↗</span></div></article>
+<article class="case" data-case="02" data-category="BRANDING / B2B—B2C"><div class="case-eyebrow mono"><span>02 / 04 — BRAND STRATEGY</span><time>ENE. 2021 — FEB. 2023</time></div><h3 data-reveal>20 PROD<span>.</span></h3><p class="case-position">Coordinador de Branding y Estrategia Digital</p><p>Estrategias de marketing, branding, contenidos y campañas para clientes B2B y B2C, incluyendo Contaperú (ERP) y Sistemas Ford (industria). Contribución a un incremento del <strong>40 % en la conversión de clientes potenciales</strong> a partir de contenido, campañas y producción audiovisual.</p><div class="case-end mono"><span>BRANDING / CAMPAIGNS / CONTENT</span><span>↗</span></div></article>
+<article class="case" data-case="03" data-category="PRODUCT DESIGN / SAAS"><div class="case-eyebrow mono"><span>03 / 04 — PRODUCT DESIGN</span><time>MAR. 2026 — ACTUALIDAD</time></div><h3 data-reveal>STUDIOS<br>TKOH<span>.</span></h3><p class="case-position">Product Designer (UX/UI) — CRM SaaS / CR MASTER</p><p>Participación en la evolución de un CRM SaaS orientado a ventas: prospectos, clientes, dashboards y seguimiento comercial. Benchmarking y traducción de necesidades de negocio en mejoras de producto.</p><div class="case-end mono"><span>UX / CRM SAAS / BENCHMARKING</span><span>↗</span></div></article>
+<article class="case" data-case="04" data-category="INSTITUCIONAL / EDITORIAL"><div class="case-eyebrow mono"><span>04 / 04 — INSTITUTIONAL</span><time>MAR. 2023 — NOV. 2023</time></div><h3 data-reveal>SUNAFIL<span>.</span></h3><p class="case-position">Especialista en Comunicación Institucional y Branding — IRE Callao</p><p>Dirección creativa, contenidos audiovisuales y diseño editorial. Incremento del <strong>25 % en engagement</strong> y reducción del <strong>15 % en tiempos de respuesta</strong> mediante piezas informativas más claras.</p><div class="case-end mono"><span>COMUNICACIÓN / CONTENIDOS</span><span>↗</span></div></article>
+</div></div>
+</section>
+<section class="evidence" aria-labelledby="evidence-title"><div class="section-rail mono"><span>03 — INDICADORES</span><span>RESULTADOS REPORTADOS</span><span>[ 03 / 06 ]</span></div><div class="evidence-head"><p class="mono">DIFERENTES SECTORES. MISMO ENFOQUE.</p><h2 id="evidence-title" data-reveal>MENOS<br><span>SUPOSICIÓN.</span><br>MÁS EVIDENCIA.</h2></div><div class="metrics"><article><div class="metric-tag mono">20 PROD. / CONVERSIÓN DE LEADS</div><strong>+40<sup>%</sup></strong><p>Incremento en la conversión al que contribuí mediante contenidos y optimización de campañas.</p></article><article><div class="metric-tag mono">SUNAFIL / ENGAGEMENT</div><strong>+25<sup>%</sup></strong><p>Incremento del engagement mediante dirección creativa y contenido audiovisual.</p></article><article><div class="metric-tag mono">SUNAFIL / CONSULTAS</div><strong>−15<sup>%</sup></strong><p>Reducción de tiempos de respuesta con comunicación informativa más clara.</p></article></div><p class="evidence-note mono">CIFRAS DECLARADAS EN EL CV PROFESIONAL; CORRESPONDEN A LAS EXPERIENCIAS INDICADAS.</p></section>
+<section id="expertise" class="section expertise" aria-labelledby="expertise-title"><div class="section-rail mono"><span>04 — CAPACIDADES</span><span>ESTRATEGIA + EJECUCIÓN</span><span>[ 04 / 06 ]</span></div><div class="expertise-layout"><div><h2 id="expertise-title" class="display-head" data-reveal>PENSAR.<br><em>DISEÑAR.</em><br>MEDIR.</h2><div class="expertise-circle" aria-hidden="true"><span>✳</span></div></div><div class="expertise-list"><article><span class="mono">01 / ESTRATEGIA</span><h3>BRANDING Y MARKETING</h3><p>Marketing B2B/B2C, posicionamiento, contenidos, buyer personas, customer journey y benchmarking.</p></article><article><span class="mono">02 / RENDIMIENTO</span><h3>CAMPAÑAS Y ANALÍTICA</h3><p>Meta Ads, TikTok Ads, KPIs, lead generation, funnel, Google Tag Manager, Meta Pixel y Google Sheets.</p></article><article><span class="mono">03 / PRODUCTO</span><h3>DISEÑO Y PRODUCCIÓN</h3><p>Figma, Illustrator, Photoshop, Premiere Pro, diseño UX/UI y producción audiovisual.</p></article></div></div></section>
+<section id="education" class="section education" aria-labelledby="education-title"><div class="section-rail mono"><span>05 — FORMACIÓN</span><span>TRAYECTORIA ACADÉMICA</span><span>[ 05 / 06 ]</span></div><div class="education-layout"><h2 id="education-title" class="display-head">SIEMPRE<br><span>EN MOVIMIENTO.</span></h2><div class="school-list"><article><time class="mono">2021</time><div><h3>BACHILLER EN CIENCIAS DE LA COMUNICACIÓN</h3><p>Universidad Nacional José Faustino Sánchez Carrión</p></div></article><article><time class="mono">2023</time><div><h3>MARKETING DIGITAL</h3><p>Fundación Telefónica</p></div></article><article><time class="mono">2023</time><div><h3>DISEÑO GRÁFICO</h3><p>Skill Centro de Capacitaciones</p></div></article><article><time class="mono">—</time><div><h3>CREACIÓN DE CONTENIDOS DIGITALES</h3><p>Fundación Telefónica</p></div></article></div></div></section>
+<section id="contact" class="contact" aria-labelledby="contact-title"><div class="section-rail mono light-rail"><span>06 — CONTACTO</span><span>LA SIGUIENTE CONVERSACIÓN</span><span>[ 06 / 06 ]</span></div><div class="contact-stage"><p class="mono">COMUNICACIÓN / ESTRATEGIA / PRODUCTO</p><h2 id="contact-title">HABLEMOS<span>.</span></h2><div class="contact-actions"><a href="mailto:lpumsm@gmail.com?subject=Contacto%20profesional%20-%20Luis%20Sabrera" class="contact-mail">ESCRÍBEME ↗</a><button type="button" id="copy-email">COPIAR CORREO <span>↗</span></button><button type="button" id="print-cv">GUARDAR EN PDF ↓</button></div><div class="contact-info mono"><a href="mailto:lpumsm@gmail.com">lpumsm@gmail.com</a><a href="tel:+51929220730">+51 929 220 730</a><span>LIMA, PERÚ</span></div></div></section>
+</main>
+<footer class="footer mono"><span>LUIS ALBERTO SABRERA ESPINOZA</span><span>PORTFOLIO / 2026</span><a href="#top">VOLVER AL INICIO ↑</a></footer>
+<div id="live-announcement" class="sr-only" role="status" aria-live="polite"></div>
+<button type="button" class="motion-control mono" id="motion-control" aria-pressed="true" aria-label="Desactivar efectos de movimiento"><span class="motion-control-mark" aria-hidden="true">◉</span> <span id="motion-text">MOTION / ON</span></button>
+<script>
+/* INK / IMPACT / 04 — motion discipline: hierarchy before FX, reveal once, no scroll-lock. */
+(() => {
+  'use strict';
+  const root = document.documentElement;
+  const nav = document.getElementById('navigation');
+  const toggle = document.getElementById('nav-toggle');
+  const progress = document.getElementById('read-progress');
+  const motionControl = document.getElementById('motion-control');
+  const motionText = document.getElementById('motion-text');
+  const systemReduced = matchMedia('(prefers-reduced-motion: reduce)');
+  const announcement = document.getElementById('live-announcement');
+  let manuallyReduced = false;
+  try { manuallyReduced = sessionStorage.getItem('ink-v4-reduced') === '1'; } catch (_) {}
+  const motionAllowed = () => !manuallyReduced && !systemReduced.matches;
+  const say = text => { announcement.textContent = ''; requestAnimationFrame(() => { announcement.textContent = text; }); };
+  function syncMotion() {
+    const enabled = motionAllowed();
+    root.classList.toggle('no-motion', !enabled);
+    motionControl.setAttribute('aria-pressed', String(enabled));
+    motionControl.setAttribute('aria-label', enabled ? 'Desactivar efectos de movimiento' : 'Activar efectos de movimiento');
+    motionControl.disabled = systemReduced.matches;
+    motionText.textContent = systemReduced.matches ? 'MOTION / SISTEMA' : (enabled ? 'MOTION / ON' : 'MOTION / OFF');
+    if(!enabled) document.querySelectorAll('[data-reveal]').forEach(e => e.classList.add('is-visible'));
+  }
+  motionControl.addEventListener('click', () => {
+    if (systemReduced.matches) return;
+    manuallyReduced = !manuallyReduced;
+    try { sessionStorage.setItem('ink-v4-reduced', manuallyReduced ? '1' : '0'); } catch (_) {}
+    syncMotion();
+    say(manuallyReduced ? 'Animaciones desactivadas' : 'Animaciones activadas');
+  });
+  systemReduced.addEventListener?.('change', syncMotion);
+  syncMotion();
+
+  const closeMenu = () => {nav.classList.remove('open');toggle.setAttribute('aria-expanded', 'false');};
+  toggle.addEventListener('click', () => {const open = nav.classList.toggle('open');toggle.setAttribute('aria-expanded', String(open));});
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+  document.addEventListener('keydown', e => {if(e.key === 'Escape' && nav.classList.contains('open')){closeMenu();toggle.focus();}});
+  document.addEventListener('pointerdown', e => {if (!nav.contains(e.target) && !toggle.contains(e.target)) closeMenu();});
+
+  // A single rAF scheduler handles reading progress, current section and active case index.
+  const sections = [...document.querySelectorAll('main section[id]')];
+  const cases = [...document.querySelectorAll('.case')];
+  const count = document.getElementById('monitor-number');
+  const category = document.getElementById('monitor-category');
+  const bars = [...document.querySelectorAll('.monitor-bars i')];
+  const links = [...document.querySelectorAll('.nav a[href^="#"]')];
+  let scheduled = false;
+  const readPosition = () => {
+    const range = document.documentElement.scrollHeight - innerHeight;
+    progress.style.width = (range > 0 ? Math.min(100,Math.max(0,scrollY / range * 100)) : 0) + '%';
+    let sectionId = '';
+    for (const section of sections) if(section.getBoundingClientRect().top <= innerHeight * .33) sectionId = section.id;
+    links.forEach(link => {
+      const selected = link.getAttribute('href') === '#' + sectionId;
+      if (selected) link.setAttribute('aria-current', 'location'); else link.removeAttribute('aria-current');
+    });
+    if (cases.length) {
+      const cutoff = innerHeight * .5;
+      let selectedIndex = 0;
+      cases.forEach((c,i) => {if(c.getBoundingClientRect().top <= cutoff) selectedIndex = i;});
+      const chosen = cases[selectedIndex];
+      const n = chosen.dataset.case || String(selectedIndex + 1).padStart(2,'0');
+      if (count.dataset.active !== n) {
+        count.dataset.active = n;
+        count.innerHTML = n + '<span>.</span>';
+        category.textContent = chosen.dataset.category || '';
+        bars.forEach((b,i) => b.classList.toggle('active', i === selectedIndex));
+      }
+    }
+    scheduled = false;
+  };
+  const requestRead = () => {if(!scheduled){scheduled = true;requestAnimationFrame(readPosition);}};
+  addEventListener('scroll', requestRead, {passive:true});
+  addEventListener('resize', requestRead, {passive:true});
+  requestRead();
+
+  // Progressive enhancement: semantic content never disappears without JavaScript.
+  const reveals = [...document.querySelectorAll('[data-reveal]')];
+  if (motionAllowed() && 'IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    }, {threshold:.08,rootMargin:'0px 0px -26px 0px'});
+    reveals.forEach(el => observer.observe(el));
+    root.classList.add('can-reveal');
+    // Fail open: content wins if the observer is delayed or the tab stays hidden.
+    setTimeout(() => { reveals.forEach(el => el.classList.add('is-visible')); observer.disconnect(); }, 4800);
+  } else reveals.forEach(el => el.classList.add('is-visible'));
+
+  // Decorative pointer reaction is capped to ±4px, available only with fine pointer.
+  const poster = document.querySelector('.hero-poster');
+  const field = document.querySelector('.poster-field');
+  if (poster && field && matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    let queued = false, coords = [0,0];
+    poster.addEventListener('pointermove', e => {
+      if (!motionAllowed() || queued) return;
+      const r = poster.getBoundingClientRect();
+      coords = [Math.max(-4,Math.min(4,((e.clientX-r.left)/r.width-.5)*8)), Math.max(-4,Math.min(4,((e.clientY-r.top)/r.height-.5)*8))];
+      queued = true;
+      requestAnimationFrame(() => {field.style.setProperty('--mx',coords[0]+'px');field.style.setProperty('--my',coords[1]+'px');queued = false;});
+    },{passive:true});
+    poster.addEventListener('pointerleave',() => {field.style.setProperty('--mx','0px');field.style.setProperty('--my','0px');});
+  }
+  document.getElementById('print-cv').addEventListener('click', () => window.print());
+  document.getElementById('copy-email').addEventListener('click', async () => {
+    const email = 'lpumsm@gmail.com';
+    try {
+      await navigator.clipboard.writeText(email);
+      say('Correo copiado al portapapeles');
+    } catch (_) {
+      const area=document.createElement('textarea');area.value=email;area.style.cssText='position:fixed;opacity:0';document.body.append(area);area.select();
+      let copied=false;try{copied=document.execCommand('copy');}catch(_){}area.remove();
+      say(copied ? 'Correo copiado al portapapeles' : 'Correo: '+email);
+    }
+  });
+})();
+
+</script>
+</body></html>
