@@ -2,10 +2,12 @@
 (() => {
   'use strict';
   const root = document.documentElement;
+  root.classList.add('has-js');
   const menu = document.getElementById('navigation');
   const toggle = document.getElementById('menu-btn');
   const replay = document.getElementById('replay');
   const motionStatus = document.getElementById('motion-status');
+  const motionToggle = document.getElementById('motion-toggle');
   const progress = document.getElementById('reading-progress');
   const hero = document.querySelector('.hero');
   const visual = document.querySelector('.hero-visual');
@@ -14,12 +16,19 @@
   const chapters = [...document.querySelectorAll('[data-chapter]')];
   const prefersReduced = matchMedia('(prefers-reduced-motion: reduce)');
   let userOptIn = false;
+  let manualPreference = null;
   let active = !prefersReduced.matches;
   let observer;
   let rafPending = false;
   let manualAnimations = [];
-  try { userOptIn = sessionStorage.getItem('criterio-motion-opt-in') === 'yes'; } catch (_) {}
-  if (userOptIn) active = true;
+  let revealTimer;
+  try {
+    userOptIn = sessionStorage.getItem('criterio-motion-opt-in') === 'yes';
+    const saved = sessionStorage.getItem('criterio-motion-setting');
+    if (saved === 'on' || saved === 'off') manualPreference = saved;
+  } catch (_) {}
+  if (manualPreference) active = manualPreference === 'on';
+  else if (userOptIn) active = true;
 
   const closeMenu = () => {
     menu.classList.remove('is-open');
@@ -32,12 +41,17 @@
     toggle.setAttribute('aria-label', open ? 'Cerrar navegación' : 'Abrir navegación');
   });
   menu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+  addEventListener('resize', () => { if (innerWidth > 900 && menu.classList.contains('is-open')) closeMenu(); }, {passive:true});
   document.addEventListener('keydown', e => { if (e.key === 'Escape' && menu.classList.contains('is-open')) { closeMenu(); toggle.focus(); } });
   document.addEventListener('pointerdown', e => { if (!menu.contains(e.target) && !toggle.contains(e.target)) closeMenu(); });
 
   function refreshMotion() {
     root.dataset.motion = active ? 'on' : 'off';
-    motionStatus.textContent = active ? 'FX EN MOVIMIENTO' : 'FX EN PAUSA · PULSA REPRODUCIR';
+    motionStatus.textContent = active ? 'FX EN MOVIMIENTO' : 'FX EN PAUSA';
+    motionToggle.textContent = active ? 'PAUSAR FX' : 'ACTIVAR FX';
+    motionToggle.setAttribute('aria-pressed', String(active));
+    motionToggle.setAttribute('aria-label', active ? 'Pausar los efectos visuales' : 'Activar los efectos visuales');
+    if (!active) cancelManual();
     entries.forEach(entry => {
       if (!active) entry.classList.add('is-visible');
       else if (!entry.classList.contains('is-visible')) {
@@ -53,7 +67,8 @@
       entries.filter(x=>!x.classList.contains('is-visible')).forEach(x=>observer.observe(x));
     } else entries.forEach(x => x.classList.add('is-visible'));
     // Fail open: content must not remain hidden when browsers suspend observers.
-    window.setTimeout(() => entries.forEach(x => x.classList.add('is-visible')), 6500);
+    clearTimeout(revealTimer);
+    revealTimer = window.setTimeout(() => entries.forEach(x => x.classList.add('is-visible')), 6500);
   }
   refreshMotion();
 
@@ -64,6 +79,8 @@
       try { sessionStorage.setItem('criterio-motion-opt-in', 'yes'); } catch (_) {}
     }
     active = true;
+    manualPreference = 'on';
+    try { sessionStorage.setItem('criterio-motion-setting','on'); } catch (_) {}
     refreshMotion();
     cancelManual();
     if (!Element.prototype.animate) return;
@@ -81,9 +98,19 @@
       animation.finished.then(() => {animation.cancel(); manualAnimations = manualAnimations.filter(a=>a!==animation)}).catch(() => {});
     }
   }
+  motionToggle.addEventListener('click', () => {
+    active = !active;
+    manualPreference = active ? 'on' : 'off';
+    userOptIn = active && prefersReduced.matches;
+    try {
+      sessionStorage.setItem('criterio-motion-opt-in', userOptIn ? 'yes' : 'no');
+      sessionStorage.setItem('criterio-motion-setting', manualPreference);
+    } catch (_) {}
+    refreshMotion();
+  });
   replay.addEventListener('click', runReplay);
   if (prefersReduced.addEventListener) prefersReduced.addEventListener('change', () => {
-    if (!userOptIn) { active = !prefersReduced.matches; refreshMotion(); }
+    if (!manualPreference && !userOptIn) { active = !prefersReduced.matches; refreshMotion(); }
   });
 
   const observeHero = 'IntersectionObserver' in window ? new IntersectionObserver(changes => {
