@@ -1,0 +1,157 @@
+{
+  "sizes": [
+    {
+      "width": 320,
+      "overflow": 0,
+      "docWidth": 320,
+      "anchors": [],
+      "experiences": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "h1Count": 1,
+      "heroH1Width": 276,
+      "heroContainerWidth": 276,
+      "summary": 4,
+      "visibleTextOverflows": [],
+      "errors": []
+    },
+    {
+      "width": 375,
+      "overflow": 0,
+      "docWidth": 375,
+      "anchors": [],
+      "experiences": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "h1Count": 1,
+      "heroH1Width": 331,
+      "heroContainerWidth": 331,
+      "summary": 4,
+      "visibleTextOverflows": [],
+      "errors": []
+    },
+    {
+      "width": 390,
+      "overflow": 0,
+      "docWidth": 390,
+      "anchors": [],
+      "experiences": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "h1Count": 1,
+      "heroH1Width": 346,
+      "heroContainerWidth": 346,
+      "summary": 4,
+      "visibleTextOverflows": [],
+      "menuOpened": true,
+      "menuClosedOnEscape": true,
+      "readingMode": true,
+      "reducedManually": true,
+      "detailsOpen": true,
+      "errors": []
+    },
+    {
+      "width": 430,
+      "overflow": 0,
+      "docWidth": 430,
+      "anchors": [],
+      "experiences": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "h1Count": 1,
+      "heroH1Width": 386,
+      "heroContainerWidth": 386,
+      "summary": 4,
+      "visibleTextOverflows": [],
+      "errors": []
+    },
+    {
+      "width": 768,
+      "overflow": 0,
+      "docWidth": 768,
+      "anchors": [],
+      "experiences": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "h1Count": 1,
+      "heroH1Width": 408,
+      "heroContainerWidth": 408,
+      "summary": 4,
+      "visibleTextOverflows": [],
+      "errors": []
+    },
+    {
+      "width": 1024,
+      "overflow": 0,
+      "docWidth": 1024,
+      "anchors": [],
+      "experiences": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "h1Count": 1,
+      "heroH1Width": 575,
+      "heroContainerWidth": 575,
+      "summary": 4,
+      "visibleTextOverflows": [],
+      "errors": []
+    },
+    {
+      "width": 1440,
+      "overflow": 0,
+      "docWidth": 1440,
+      "anchors": [],
+      "experiences": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "h1Count": 1,
+      "heroH1Width": 822,
+      "heroContainerWidth": 822,
+      "summary": 4,
+      "visibleTextOverflows": [],
+      "errors": []
+    },
+    {
+      "width": 1920,
+      "overflow": 0,
+      "docWidth": 1920,
+      "anchors": [],
+      "experiences": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "h1Count": 1,
+      "heroH1Width": 1112,
+      "heroContainerWidth": 1112,
+      "summary": 4,
+      "visibleTextOverflows": [],
+      "errors": []
+    }
+  ],
+  "systemReducedMotion": {
+    "disabled": true,
+    "textVisible": true
+  }
+}
