@@ -1,0 +1,26 @@
+{
+  "basis": "11-width Chromium local set_content test using HTML/CSS/JS with system font fallbacks",
+  "widths": [
+    320,
+    360,
+    375,
+    390,
+    430,
+    650,
+    768,
+    950,
+    1024,
+    1440,
+    1920
+  ],
+  "horizontalOverflowObserved": 0,
+  "uncaughtJSErrors": 0,
+  "internalAnchorsBroken": 0,
+  "sections": 7,
+  "experiences": 4,
+  "menuEscape": true,
+  "readingMode": true,
+  "reducedMotionOS": true,
+  "printPages": 2,
+  "notes": "Visual changes published as scoped CSS equivalent to tested local candidate, except PDF download kept in local archive only; inspect hosted Google Fonts before final acceptance."
+}
