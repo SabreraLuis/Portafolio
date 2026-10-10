@@ -93,3 +93,7 @@ Important limitations: browser QA is local and uses local system font fallbacks 
 
 - This new edition lives under `cv-ink-impact-v6/` and **does not replace** the existing website root or the V1–V5 experiments.
 - No new photo assets or remote marketing imagery have been included. If the user supplies a real portrait, adapt it with their explicit approval.
+
+### V6.1 print refinement
+
+Print uses a document-first two-page layout, retaining all four employers and expanding disclosures for printing with `beforeprint`, then restoring their previous state with `afterprint`. The browser's native Save as PDF is intentionally the export mechanism; no stale static CV file is bundled in production. Local PDF extraction confirmed all four jobs, qualifications, email, phone and source metrics. The generated print preview is a QA artifact, not a verified production/browser-specific render.
