@@ -1,0 +1,128 @@
+{
+  "candidate": "CRITERIO V7",
+  "source": "local file:// with fallback fonts, Chromium Playwright",
+  "widths": [
+    {
+      "width": 320,
+      "overflow": 0,
+      "js_errors": [],
+      "headline_size": "61.76px",
+      "motion": "on"
+    },
+    {
+      "width": 360,
+      "overflow": 0,
+      "js_errors": [],
+      "headline_size": "69.48px",
+      "motion": "on"
+    },
+    {
+      "width": 375,
+      "overflow": 0,
+      "js_errors": [],
+      "headline_size": "72.375px",
+      "motion": "on"
+    },
+    {
+      "width": 390,
+      "overflow": 0,
+      "js_errors": [],
+      "headline_size": "101px",
+      "motion": "on"
+    },
+    {
+      "width": 430,
+      "overflow": 0,
+      "js_errors": [],
+      "headline_size": "101px",
+      "motion": "on"
+    },
+    {
+      "width": 650,
+      "overflow": 0,
+      "js_errors": [],
+      "headline_size": "127.4px",
+      "motion": "on"
+    },
+    {
+      "width": 651,
+      "overflow": 0,
+      "js_errors": [],
+      "headline_size": "95.697px",
+      "motion": "on"
+    },
+    {
+      "width": 768,
+      "overflow": 0,
+      "js_errors": [],
+      "headline_size": "112.896px",
+      "motion": "on"
+    },
+    {
+      "width": 900,
+      "overflow": 0,
+      "js_errors": [],
+      "headline_size": "132.3px",
+      "motion": "on"
+    },
+    {
+      "width": 1024,
+      "overflow": 0,
+      "js_errors": [],
+      "headline_size": "153.6px",
+      "motion": "on"
+    },
+    {
+      "width": 1280,
+      "overflow": 0,
+      "js_errors": [],
+      "headline_size": "192px",
+      "motion": "on"
+    },
+    {
+      "width": 1440,
+      "overflow": 0,
+      "js_errors": [],
+      "headline_size": "220.32px",
+      "motion": "on"
+    },
+    {
+      "width": 1920,
+      "overflow": 0,
+      "js_errors": [],
+      "headline_size": "270px",
+      "motion": "on"
+    }
+  ],
+  "errors": [],
+  "dynamic": {
+    "disc_transform_start": "matrix(0.938309, -0.148603, 0.148603, 0.938309, -17.9989, 4.9992)",
+    "disc_transform_850ms": "matrix(0.952605, -0.118621, 0.118621, 0.952605, -14.5584, 2.55468)",
+    "transform_changed": true,
+    "replay_changed_transform": true,
+    "replay_start": "matrix(1, 0, 0, 1, 0, 87.2625)",
+    "replay_320ms": "matrix(1, 0, 0, 1, 0, 12.0481)"
+  },
+  "behaviors": {
+    "mobile_menu_open": true,
+    "escape_closes_menu": true,
+    "link_pdf_exists": true,
+    "anchor_targets_valid": true,
+    "reveal_visible_on_scroll": true,
+    "chapter_nav_location": true,
+    "reduced_motion_default_off": true,
+    "reduced_motion_explicit_optin": true
+  },
+  "limits": [
+    "No HTTP production check",
+    "No Lighthouse score",
+    "No Safari/iOS physical-device coverage",
+    "External Google fonts unavailable in local test"
+  ],
+  "contrast_checks": {
+    "ink_on_paper": "15.62:1",
+    "white_on_cta_red_dark": "5.52:1",
+    "dark_red_on_paper": "4.80:1"
+  },
+  "status": "Local QA passed; public URL runtime, real fonts, Safari and Lighthouse pending"
+}
