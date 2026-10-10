@@ -1,0 +1,46 @@
+{
+  "release": "CRITERIO V7.7",
+  "status": "local_qa_passed_publication_pending",
+  "changes": [
+    "sticky navigation desktop/mobile",
+    "aria-current active chapter",
+    "mobile chapter display 00–05",
+    "native hash navigation with focus management",
+    "Escape/outside close",
+    "menu max-height and scroll",
+    "responsive anchor offsets",
+    "canonical and PDF intact"
+  ],
+  "verification": {
+    "viewports": [
+      320,
+      360,
+      390,
+      430,
+      768,
+      900,
+      1024,
+      1440,
+      1920
+    ],
+    "nav_checks": 13,
+    "nav_checks_pass": true,
+    "js_errors": 0,
+    "horizontal_overflow_px": 0,
+    "living_fx_motion_observable": true,
+    "static_checks": true,
+    "resource_budget": true,
+    "regression_browser_smoke": true,
+    "regression_production": true,
+    "regression_dossiers": true,
+    "regression_cinematic": true,
+    "regression_living_fx": true
+  },
+  "limitations": [
+    "Tested local Chromium with fallback fonts; local HTTP navigation blocked by host policy",
+    "iOS/Safari and physical Android tests pending",
+    "Public CDN requests not directly verified",
+    "No field Core Web Vitals measurement"
+  ],
+  "rollback": "criterio-v7-6/"
+}
