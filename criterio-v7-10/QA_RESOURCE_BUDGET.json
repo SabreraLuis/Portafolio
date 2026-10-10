@@ -1,0 +1,29 @@
+{
+  "files": {
+    "html": 27450,
+    "css": 84095,
+    "javascript": 19872,
+    "pdf": 79204,
+    "favicon": 249,
+    "grain": 9380
+  },
+  "limits": {
+    "html": 36000,
+    "css": 90000,
+    "javascript": 23000,
+    "pdf": 100000,
+    "favicon": 12000,
+    "grain": 16000
+  },
+  "checks": {
+    "budget": true,
+    "no_remote_scripts": true,
+    "no_unsafe_eval": true,
+    "pdf_magic": true,
+    "canonical_v710": true,
+    "pdf_self_contained": true,
+    "privacy_no_analytics": true
+  },
+  "total_asset_bytes": 220250,
+  "note": "Only first-party static bytes; fonts from Google Fonts are not included. This is not Lighthouse or field performance data."
+}

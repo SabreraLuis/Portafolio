@@ -1,0 +1,20 @@
+{
+  "version": "7.10",
+  "label": "Global Signal",
+  "status": "local-pass awaiting public GitHub CI verification",
+  "viewports": 11,
+  "scene_targets": 24,
+  "scene_types_tested": 13,
+  "scene_types_seen": true,
+  "errors": [],
+  "default_on_normal_motion": true,
+  "reduced_motion_off_default": true,
+  "manual_pause_resume": true,
+  "first_party_static_bytes_local_including_local_cv": 220250,
+  "rollback": "/Portafolio/criterio-v7-9/",
+  "limitations": [
+    "Local fallback fonts rather than downloaded Google Fonts",
+    "Real HTTP Pages CDN, iOS Safari and Android hardware pending",
+    "No field Core Web Vitals"
+  ]
+}

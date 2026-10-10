@@ -1,0 +1,45 @@
+name: CRITERIO V7.10 — Global Signal QA
+on:
+  push:
+    paths:
+      - 'criterio-v7-10/**'
+      - '.github/workflows/criterio-v7-10-quality.yml'
+  pull_request:
+    paths:
+      - 'criterio-v7-10/**'
+      - '.github/workflows/criterio-v7-10-quality.yml'
+permissions:
+  contents: read
+jobs:
+  browser-quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Source contracts and syntax
+        run: |
+          node --check criterio-v7-10/app.js
+          python criterio-v7-10/qa/static_checks.py
+          python criterio-v7-10/qa/resource_budget.py
+      - name: Browser runtime
+        run: |
+          python -m pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Marketing narrative and global motion
+        run: |
+          python criterio-v7-10/qa/marketing_positioning.py
+          python criterio-v7-10/qa/signal_cut.py
+          python criterio-v7-10/qa/global_scene_quality.py
+      - name: Navigation, dossier, cinematic and operability regressions
+        run: |
+          python criterio-v7-10/qa/browser_smoke.py
+          python criterio-v7-10/qa/navigation_quality.py
+          python criterio-v7-10/qa/dossier_motion.py
+          python criterio-v7-10/qa/cinematic_bridges.py
+          python criterio-v7-10/qa/production_gate.py

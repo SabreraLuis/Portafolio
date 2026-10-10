@@ -1,0 +1,170 @@
+{
+  "viewports": [
+    {
+      "width": 320,
+      "overflow": 0,
+      "motion": "on",
+      "scenes": 24,
+      "clipped": [],
+      "errors": []
+    },
+    {
+      "width": 360,
+      "overflow": 0,
+      "motion": "on",
+      "scenes": 24,
+      "clipped": [],
+      "errors": []
+    },
+    {
+      "width": 390,
+      "overflow": 0,
+      "motion": "on",
+      "scenes": 24,
+      "clipped": [],
+      "errors": []
+    },
+    {
+      "width": 430,
+      "overflow": 0,
+      "motion": "on",
+      "scenes": 24,
+      "clipped": [],
+      "errors": []
+    },
+    {
+      "width": 650,
+      "overflow": 0,
+      "motion": "on",
+      "scenes": 24,
+      "clipped": [],
+      "errors": []
+    },
+    {
+      "width": 700,
+      "overflow": 0,
+      "motion": "on",
+      "scenes": 24,
+      "clipped": [],
+      "errors": []
+    },
+    {
+      "width": 768,
+      "overflow": 0,
+      "motion": "on",
+      "scenes": 24,
+      "clipped": [],
+      "errors": []
+    },
+    {
+      "width": 900,
+      "overflow": 0,
+      "motion": "on",
+      "scenes": 24,
+      "clipped": [],
+      "errors": []
+    },
+    {
+      "width": 1024,
+      "overflow": 0,
+      "motion": "on",
+      "scenes": 24,
+      "clipped": [],
+      "errors": []
+    },
+    {
+      "width": 1440,
+      "overflow": 0,
+      "motion": "on",
+      "scenes": 24,
+      "clipped": [],
+      "errors": []
+    },
+    {
+      "width": 1920,
+      "overflow": 0,
+      "motion": "on",
+      "scenes": 24,
+      "clipped": [],
+      "errors": []
+    }
+  ],
+  "scenes": {
+    "vision": {
+      "seen": true,
+      "running": true,
+      "animation": true
+    },
+    "disciplines": {
+      "seen": true,
+      "running": true,
+      "animation": false
+    },
+    "discipline": {
+      "seen": true,
+      "running": true,
+      "animation": false
+    },
+    "archive": {
+      "seen": true,
+      "running": true,
+      "animation": true
+    },
+    "dossier": {
+      "seen": true,
+      "running": false,
+      "animation": false
+    },
+    "interlude": {
+      "seen": true,
+      "running": true,
+      "animation": true
+    },
+    "evidence": {
+      "seen": true,
+      "running": true,
+      "animation": true
+    },
+    "metric": {
+      "seen": true,
+      "running": true,
+      "animation": false
+    },
+    "method": {
+      "seen": true,
+      "running": true,
+      "animation": true
+    },
+    "method-step": {
+      "seen": true,
+      "running": true,
+      "animation": false
+    },
+    "training": {
+      "seen": true,
+      "running": true,
+      "animation": true
+    },
+    "bridge": {
+      "seen": true,
+      "running": true,
+      "animation": true
+    },
+    "contact": {
+      "seen": true,
+      "running": true,
+      "animation": true
+    }
+  },
+  "controls": {
+    "auto_on_fresh_tab": true,
+    "auto_button_says_pause": true,
+    "pause": true,
+    "all_scene_bursts_stopped": true,
+    "resume": true,
+    "all_scenes_covered": true,
+    "reduce_off": true,
+    "reduce_manual_on": true
+  },
+  "errors": []
+}
