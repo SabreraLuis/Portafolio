@@ -111,8 +111,10 @@
     readingButton.setAttribute('aria-pressed', String(enabled));
     readingButton.textContent = enabled ? 'VISTA EDITORIAL' : 'MODO LECTURA';
     readingButton.setAttribute('aria-label', enabled ? 'Volver a la vista editorial' : 'Mostrar vista compacta de lectura');
-    // Resync on reduced layouts; there must not be hidden-but-animated elements.
-    allReveals.forEach(el => el.classList.add('is-in'));
+    // Don't pre-reveal every section on startup: this previously disabled
+    // all scroll-triggered entrance motion across the entire site.
+    if (enabled) allReveals.forEach(el => el.classList.add('is-in'));
+    else if (activeMotion()) syncMotion();
   }
   readingButton.addEventListener('click', () => {
     readingPref = readingPref === 'on' ? 'off' : 'on';
