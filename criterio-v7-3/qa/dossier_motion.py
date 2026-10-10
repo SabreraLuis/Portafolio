@@ -25,11 +25,12 @@ with sync_playwright() as pw:
       inFocus=item.evaluate('(e)=>e.classList.contains("in-focus")')
       jump=item.locator('.dossier-actions a').get_attribute('href')
       graphic=item.locator('.case-graphic-header').is_visible()
+      visualRatio=item.evaluate('(e)=>e.querySelector(".dossier-visual").getBoundingClientRect().width/e.getBoundingClientRect().width')
       first=item.locator('.case-graphic-cut').evaluate('(e)=>getComputedStyle(e).transform')
       p.wait_for_timeout(410)
       second=item.locator('.case-graphic-cut').evaluate('(e)=>getComputedStyle(e).transform')
       vals=p.evaluate('''()=>({w:Math.max(document.documentElement.scrollWidth,document.body.scrollWidth),width:innerWidth})''')
-      results[id]={'activeLink':active,'inFocus':inFocus,'jump':jump,'graphicVisible':graphic,'graphicMoving':first!=second,'overflow':max(0,vals['w']-vals['width'])}
+      results[id]={'activeLink':active,'inFocus':inFocus,'jump':jump,'graphicVisible':graphic,'visualWidthRatio':round(visualRatio,3),'graphicMoving':first!=second,'overflow':max(0,vals['w']-vals['width'])}
     report['cases'][str(width)]=results
     if width==390:
       p.locator('#motion-toggle').click()
@@ -45,5 +46,5 @@ with sync_playwright() as pw:
   browser.close()
 (root/'QA_DOSSIERS.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))
 print(json.dumps(report,ensure_ascii=False,indent=2))
-if report['errors'] or not all(report['checks'].values()) or not all(all(v['activeLink'] and v['inFocus'] and v['graphicVisible'] and v['graphicMoving'] and v['overflow']==0 for v in d.values()) for d in report['cases'].values()):
+if report['errors'] or not all(report['checks'].values()) or not all(all(v['activeLink'] and v['inFocus'] and v['graphicVisible'] and v['visualWidthRatio'] >= (.95 if width=='390' else .2) and v['graphicMoving'] and v['overflow']==0 for v in d.values()) for d in report['cases'].values()):
   raise SystemExit('Dossier QA FAILED')
