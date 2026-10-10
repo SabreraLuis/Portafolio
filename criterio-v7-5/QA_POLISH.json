@@ -1,0 +1,102 @@
+{
+  "widths": [
+    {
+      "width": 320,
+      "overflow": 0,
+      "js_errors": [],
+      "headings_outside_viewport": 0
+    },
+    {
+      "width": 360,
+      "overflow": 0,
+      "js_errors": [],
+      "headings_outside_viewport": 0
+    },
+    {
+      "width": 375,
+      "overflow": 0,
+      "js_errors": [],
+      "headings_outside_viewport": 0
+    },
+    {
+      "width": 390,
+      "overflow": 0,
+      "js_errors": [],
+      "headings_outside_viewport": 0
+    },
+    {
+      "width": 430,
+      "overflow": 0,
+      "js_errors": [],
+      "headings_outside_viewport": 0
+    },
+    {
+      "width": 650,
+      "overflow": 0,
+      "js_errors": [],
+      "headings_outside_viewport": 0
+    },
+    {
+      "width": 768,
+      "overflow": 0,
+      "js_errors": [],
+      "headings_outside_viewport": 0
+    },
+    {
+      "width": 900,
+      "overflow": 0,
+      "js_errors": [],
+      "headings_outside_viewport": 0
+    },
+    {
+      "width": 1024,
+      "overflow": 0,
+      "js_errors": [],
+      "headings_outside_viewport": 0
+    },
+    {
+      "width": 1280,
+      "overflow": 0,
+      "js_errors": [],
+      "headings_outside_viewport": 0
+    },
+    {
+      "width": 1440,
+      "overflow": 0,
+      "js_errors": [],
+      "headings_outside_viewport": 0
+    },
+    {
+      "width": 1920,
+      "overflow": 0,
+      "js_errors": [],
+      "headings_outside_viewport": 0
+    }
+  ],
+  "interactions": {
+    "menu_opens": true,
+    "pdf_visible_in_menu": true,
+    "menu_escape": true,
+    "pdf_visible_in_hero": true,
+    "fx_pauses": true,
+    "fx_resumes": true,
+    "replay_moves": true,
+    "scroll_reveals": true,
+    "case_index_anchor": true,
+    "interlude_visible": true,
+    "interlude_motion_measurable": true,
+    "menu_reset_on_resize": true,
+    "reduced_default_off": true,
+    "reduced_explicit_opt_in": true,
+    "reduced_explicit_opt_out": true,
+    "nojs_navigation": true,
+    "nojs_pdf": true
+  },
+  "browser_errors": [],
+  "limits": [
+    "inline-local resources; not a live CDN test",
+    "Google Fonts network disabled",
+    "Safari and physical devices not covered",
+    "sessionStorage persistence not verifiable in about:blank sandbox"
+  ]
+}

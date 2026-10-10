@@ -1,0 +1,128 @@
+{
+  "cases": {
+    "390": {
+      "amp": {
+        "activeLink": true,
+        "inFocus": true,
+        "jump": "#metodo",
+        "graphicVisible": true,
+        "visualWidthRatio": 1,
+        "graphicMoving": true,
+        "overflow": 0
+      },
+      "prod": {
+        "activeLink": true,
+        "inFocus": true,
+        "jump": "#evidencia",
+        "graphicVisible": true,
+        "visualWidthRatio": 1,
+        "graphicMoving": true,
+        "overflow": 0
+      },
+      "tkoh": {
+        "activeLink": true,
+        "inFocus": true,
+        "jump": "#metodo",
+        "graphicVisible": true,
+        "visualWidthRatio": 1,
+        "graphicMoving": true,
+        "overflow": 0
+      },
+      "sunafil": {
+        "activeLink": true,
+        "inFocus": true,
+        "jump": "#evidencia",
+        "graphicVisible": true,
+        "visualWidthRatio": 1,
+        "graphicMoving": true,
+        "overflow": 0
+      }
+    },
+    "768": {
+      "amp": {
+        "activeLink": true,
+        "inFocus": true,
+        "jump": "#metodo",
+        "graphicVisible": true,
+        "visualWidthRatio": 0.4,
+        "graphicMoving": true,
+        "overflow": 0
+      },
+      "prod": {
+        "activeLink": true,
+        "inFocus": true,
+        "jump": "#evidencia",
+        "graphicVisible": true,
+        "visualWidthRatio": 0.4,
+        "graphicMoving": true,
+        "overflow": 0
+      },
+      "tkoh": {
+        "activeLink": true,
+        "inFocus": true,
+        "jump": "#metodo",
+        "graphicVisible": true,
+        "visualWidthRatio": 0.4,
+        "graphicMoving": true,
+        "overflow": 0
+      },
+      "sunafil": {
+        "activeLink": true,
+        "inFocus": true,
+        "jump": "#evidencia",
+        "graphicVisible": true,
+        "visualWidthRatio": 0.4,
+        "graphicMoving": true,
+        "overflow": 0
+      }
+    },
+    "1440": {
+      "amp": {
+        "activeLink": true,
+        "inFocus": true,
+        "jump": "#metodo",
+        "graphicVisible": true,
+        "visualWidthRatio": 0.28,
+        "graphicMoving": true,
+        "overflow": 0
+      },
+      "prod": {
+        "activeLink": true,
+        "inFocus": true,
+        "jump": "#evidencia",
+        "graphicVisible": true,
+        "visualWidthRatio": 0.28,
+        "graphicMoving": true,
+        "overflow": 0
+      },
+      "tkoh": {
+        "activeLink": true,
+        "inFocus": true,
+        "jump": "#metodo",
+        "graphicVisible": true,
+        "visualWidthRatio": 0.28,
+        "graphicMoving": true,
+        "overflow": 0
+      },
+      "sunafil": {
+        "activeLink": true,
+        "inFocus": true,
+        "jump": "#evidencia",
+        "graphicVisible": true,
+        "visualWidthRatio": 0.28,
+        "graphicMoving": true,
+        "overflow": 0
+      }
+    }
+  },
+  "checks": {
+    "paused_motion": true,
+    "index_navigation": true,
+    "case_actions_factual": true,
+    "minimum_touch_target": true
+  },
+  "errors": [],
+  "notes": [
+    "Chromium with inline JS and CSS, fallback fonts; not mobile physical nor public HTTP test"
+  ]
+}

@@ -1,0 +1,45 @@
+name: CRITERIO V7.5 quality
+
+on:
+  push:
+    paths:
+      - 'criterio-v7-5/**'
+      - '.github/workflows/criterio-v7-5-quality.yml'
+  pull_request:
+    paths:
+      - 'criterio-v7-5/**'
+      - '.github/workflows/criterio-v7-5-quality.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  production-quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Static contracts and local files
+        run: python criterio-v7-5/qa/static_checks.py
+      - name: JavaScript syntax
+        run: node --check criterio-v7-5/app.js
+      - name: Resource budgets and artifact integrity
+        run: python criterio-v7-5/qa/resource_budget.py
+      - name: Install Chromium
+        run: |
+          python -m pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Responsive and interaction smoke
+        run: python criterio-v7-5/qa/browser_smoke.py
+      - name: Dossier motions
+        run: python criterio-v7-5/qa/dossier_motion.py
+      - name: Cinematic bridges
+        run: python criterio-v7-5/qa/cinematic_bridges.py
+      - name: Production polish regression suite
+        run: python criterio-v7-5/qa/production_gate.py

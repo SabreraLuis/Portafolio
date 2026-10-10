@@ -1,0 +1,25 @@
+{
+  "version": "7.5",
+  "product": "CRITERIO — INK / IMPACT",
+  "status": "local_quality_passed_publication_pending",
+  "local": {
+    "responsive_widths_tested": 12,
+    "interactions_checked": 17,
+    "interactions_pass": true,
+    "production_widths": 8,
+    "production_interactions": 10,
+    "production_interactions_pass": true,
+    "no_horizontal_overflow": true,
+    "no_js_errors": true,
+    "first_party_bytes": 141148,
+    "budget_pass": true,
+    "pdf_git_blob_sha": "f19152c6d130a861fc94797b2a76433c06a09ee2"
+  },
+  "known_limitations": [
+    "Public CDN browser HTTP validation unavailable in this sandbox",
+    "Physical Android/iOS Safari untested",
+    "Google Fonts blocked in local Chromium",
+    "Core Web Vitals field data and public Lighthouse pending"
+  ],
+  "rollback": "/Portafolio/criterio-v7-4/"
+}

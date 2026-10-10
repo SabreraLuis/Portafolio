@@ -1,0 +1,109 @@
+{
+  "responsive": [
+    {
+      "width": 320,
+      "overflow": 0,
+      "h1": 1,
+      "pdfLocal": true,
+      "contentVisible": true,
+      "chapterIndex": true,
+      "skipLink": true,
+      "motionOff": true,
+      "errors": []
+    },
+    {
+      "width": 375,
+      "overflow": 0,
+      "h1": 1,
+      "pdfLocal": true,
+      "contentVisible": true,
+      "chapterIndex": true,
+      "skipLink": true,
+      "motionOff": true,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "overflow": 0,
+      "h1": 1,
+      "pdfLocal": true,
+      "contentVisible": true,
+      "chapterIndex": true,
+      "skipLink": true,
+      "motionOff": true,
+      "errors": []
+    },
+    {
+      "width": 430,
+      "overflow": 0,
+      "h1": 1,
+      "pdfLocal": true,
+      "contentVisible": true,
+      "chapterIndex": true,
+      "skipLink": true,
+      "motionOff": true,
+      "errors": []
+    },
+    {
+      "width": 768,
+      "overflow": 0,
+      "h1": 1,
+      "pdfLocal": true,
+      "contentVisible": true,
+      "chapterIndex": true,
+      "skipLink": true,
+      "motionOff": true,
+      "errors": []
+    },
+    {
+      "width": 1024,
+      "overflow": 0,
+      "h1": 1,
+      "pdfLocal": true,
+      "contentVisible": true,
+      "chapterIndex": true,
+      "skipLink": true,
+      "motionOff": true,
+      "errors": []
+    },
+    {
+      "width": 1440,
+      "overflow": 0,
+      "h1": 1,
+      "pdfLocal": true,
+      "contentVisible": true,
+      "chapterIndex": true,
+      "skipLink": true,
+      "motionOff": true,
+      "errors": []
+    },
+    {
+      "width": 1920,
+      "overflow": 0,
+      "h1": 1,
+      "pdfLocal": true,
+      "contentVisible": true,
+      "chapterIndex": true,
+      "skipLink": true,
+      "motionOff": true,
+      "errors": []
+    }
+  ],
+  "interaction": {
+    "mobile_open": true,
+    "mobile_escape": true,
+    "manual_pause": true,
+    "manual_resume": true,
+    "tab_hidden_pause": true,
+    "tab_return_resumes": true,
+    "print_hides_fx": true,
+    "print_displays_details": true,
+    "screen_restored": true,
+    "js_no_errors": true
+  },
+  "limits": [
+    "Chromium local with fallback fonts, not actual GitHub Pages CDN",
+    "Safari/iOS and physical Android device still require manual validation",
+    "Synthetic behavior gates are not field Core Web Vitals"
+  ]
+}
