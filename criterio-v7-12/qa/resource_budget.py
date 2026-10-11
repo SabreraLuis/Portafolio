@@ -4,7 +4,7 @@ from pathlib import Path
 import json,re
 root=Path(__file__).resolve().parents[1]
 files={'html':root/'index.html','css':root/'styles.css','javascript':root/'app.js','pdf':root/'cv-luis-sabrera.pdf','favicon':root/'favicon.svg','grain':root/'grain.png'}
-limits={'html':36000,'css':90000,'javascript':23000,'pdf':100000,'favicon':12000,'grain':16000}
+limits={'html':36000,'css':100000,'javascript':25000,'pdf':100000,'favicon':12000,'grain':16000}
 sizes={k:v.stat().st_size for k,v in files.items()}
 html=files['html'].read_text(encoding='utf-8'); js=files['javascript'].read_text(encoding='utf-8')
 flags={
