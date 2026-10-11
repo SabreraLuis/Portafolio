@@ -36,6 +36,7 @@ jobs:
           python criterio-v7-12/qa/marketing_positioning.py
           python criterio-v7-12/qa/global_scene_quality.py
           python criterio-v7-12/qa/editorial_depth.py
+          python criterio-v7-12/qa/font_fallback.py
       - name: Regression checks
         run: |
           python criterio-v7-12/qa/browser_smoke.py

@@ -723,3 +723,22 @@ html[data-motion="off"] [data-depth],html.visibility-paused [data-depth]{transla
 @media (max-width:700px){.brief-top span:last-child{display:none}.brief-head{gap:16px;padding:28px 0}.brief-head h2{font-size:clamp(55px,12vw,84px)}.brief-grid{display:block}.brief-card{min-height:152px;border-right:0;border-bottom:1px solid var(--ink);padding:21px 18px 18px;gap:9px}.brief-card:last-child{border-bottom:0}.brief-card strong{font-size:clamp(35px,8.6vw,55px)}.brief-card small{margin-top:0}.brief-bottom span{display:none}.depth-decor{opacity:.36}.depth-ring{right:-35%}}
 @media(prefers-reduced-motion:reduce){html:not([data-motion="on"]) [data-depth]{translate:0 0!important}html{scroll-behavior:auto}}
 @media print{.depth-decor{display:none!important}.recruiter-brief{padding:10mm 0;break-inside:avoid}.brief-head{display:block;padding:5mm 0}.brief-head h2{font-size:25pt}.brief-head>p{font-size:10pt}.brief-grid{display:block;border:0}.brief-card{min-height:0;break-inside:avoid;display:block;border:0;border-bottom:1px solid #aaa;padding:2mm}.brief-card strong{font-size:17pt}.brief-card small{display:block;font-size:9pt}.brief-arrow,.brief-bottom{display:none}}
+
+/* 7.12 font fallback guard: keep mobile editorial layouts within 320px without condensed fonts. */
+@media (max-width:700px){
+ .brief-head{grid-template-columns:minmax(0,1fr)}
+ .brief-head>div,.brief-head>p,.brief-head h2{min-width:0;max-width:100%}
+ .brief-head h2,.brief-card strong{overflow-wrap:anywhere}
+}
+@media (max-width:430px){
+ .brief-head h2{font-size:clamp(45px,11vw,60px)}
+ .brief-card strong{font-size:clamp(29px,7.7vw,35px)}
+ .evidence-layout{grid-template-columns:minmax(0,1fr);min-width:0;max-width:100%}
+ .evidence-intro,.evidence-numbers,.metric{min-width:0;max-width:100%}
+ .evidence-intro h2{font-size:clamp(48px,10.8vw,60px);overflow-wrap:anywhere}
+}
+@media (max-width:359px){
+ .manifesto-content h2{font-size:clamp(43px,10.7vw,51px);overflow-wrap:anywhere;overflow:clip}
+ .metric strong{font-size:clamp(95px,28vw,115px)}
+ .manifesto{overflow-x:clip}
+}
