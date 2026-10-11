@@ -10,7 +10,7 @@ Versión reversible sobre V7.12. Enfatiza la legibilidad de marketing, publicida
 - Eliminadas reglas de `overflow:clip` como solución superficial de titulares estrechos.
 
 ## Evidencia
-`EDITORIAL_SYSTEM_V7_13.md`, `QA_EDITORIAL_CONTRACT_V7_13.json` y `qa/editorial_contract.py`. Chromium local y fallback fonts; no implica validación física iOS/Android ni Core Web Vitals de campo.
+`EDITORIAL_SYSTEM_V7_13.md`, `QA_EDITORIAL_CONTRACT_V7_13.json` y `qa/editorial_contract.py`. Chromium local y dos familias de fallback (13 anchuras × 2 = 26 comprobaciones); no implica validación física iOS/Android ni Core Web Vitals de campo.
 
 ## Rollback
 Versión anterior intacta: `https://sabreraluis.github.io/Portafolio/criterio-v7-12/`.

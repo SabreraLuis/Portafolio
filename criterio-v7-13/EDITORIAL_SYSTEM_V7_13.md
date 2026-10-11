@@ -32,7 +32,7 @@ Fuentes metodológicas: `addyosmani/agent-skills` → `frontend-ui-engineering`,
 - El scroll por capas mueve decoración, nunca bloques de lectura ni enlaces.
 
 ## QA para aceptación
-- Script `qa/editorial_contract.py` en Chromium comprueba 13 tamaños (320, 360, 375, 390, 430, 600, 700, 768, 900, 1024, 1280, 1440, 1920), seis familias de titulares, cajas de contacto, ancho total, no invasión del HUD, tres especialidades y sin errores JS.
+- Script `qa/editorial_contract.py` en Chromium comprueba 13 tamaños y dos familias tipográficas (26 escenarios) (320, 360, 375, 390, 430, 600, 700, 768, 900, 1024, 1280, 1440, 1920), seis familias de titulares, cajas de contacto, ancho total, no invasión del HUD, tres especialidades y sin errores JS.
 - `qa/browser_smoke.py`, `qa/navigation_quality.py`, `qa/marketing_positioning.py`, `qa/editorial_depth.py`, `qa/static_checks.py` y `qa/resource_budget.py` complementan estos checks.
 - No llamar «sin bugs» a un diseño solo porque GitHub Pages publique correctamente.
 

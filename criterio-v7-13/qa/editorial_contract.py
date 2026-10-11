@@ -13,10 +13,11 @@ h=h.replace('<link rel="stylesheet" href="./styles.css">',f'<style>{css}</style>
 report={'widths':[],'checks':{},'console_errors':[]}
 with sync_playwright() as p:
  b=p.chromium.launch(executable_path='/usr/bin/chromium',headless=True,args=['--no-sandbox','--disable-background-networking'])
- for width in (320,360,375,390,430,600,700,768,900,1024,1280,1440,1920):
+ for width,wide_fallback in [(w, False) for w in (320,360,375,390,430,600,700,768,900,1024,1280,1440,1920)] + [(w, True) for w in (320,360,375,390,430,600,700,768,900,1024,1280,1440,1920)]:
   page=b.new_page(viewport={'width':width,'height':850 if width<701 else 900},reduced_motion='reduce')
   page.on('pageerror',lambda e:report['console_errors'].append(str(e)))
   page.set_content(h,wait_until='domcontentloaded')
+  if wide_fallback: page.add_style_tag(content=':root{--display:Arial,sans-serif!important}')
   result=page.evaluate('''() => {
    let bad=[];
    const sels=['.contact-head','.contact-cta','.contact-base','.contact-address','.brief-head h2','.brief-card strong','.manifesto-content h2','.discipline-card h4','.archive-header h2','.dossier-title h3','.evidence-intro h2','.method-head h2','.method-stages h3','.training h3'];
@@ -30,7 +31,7 @@ with sync_playwright() as p:
     brief:document.querySelectorAll('.brief-card').length,
     nav:document.querySelectorAll('nav.navigation a[href^="#"]').length};
   }''')
-  report['widths'].append({'width':width,**result})
+  report['widths'].append({'width':width,'font_case':'wide_sans_fallback' if wide_fallback else 'native_fallback',**result})
   page.close()
  b.close()
 report['checks']={

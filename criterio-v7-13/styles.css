@@ -800,3 +800,14 @@ html[data-motion="off"] [data-depth],html.visibility-paused [data-depth]{transla
   .contact-cta { font-size: 33px; }
 }
 @media print { .chapter-hud { display:none!important; } }
+/* V7.13 cross-runner typography: keep text within its own grid cell even
+   when Barlow Condensed, Roboto Condensed and Impact are unavailable. */
+@media screen and (min-width:701px){.contact-head{font-size:clamp(100px,15.7vw,244px)}}
+@media screen and (min-width:901px){
+ .method-head .display-head{font-size:clamp(74px,8.9vw,158px)}
+ .method-stages h3{font-size:clamp(33px,3.25vw,64px)}
+ .evidence-intro h2{font-size:clamp(70px,8.2vw,143px)}
+}
+@media screen and (max-width:430px){.discipline-card h4{font-size:clamp(26px,7.5vw,32px)}}
+@media screen and (min-width:1281px){.discipline-card h4{font-size:clamp(37px,3.2vw,60px)}}
+@media screen and (min-width:360px) and (max-width:700px){.manifesto-content h2{font-size:clamp(51px,10vw,80px)}}

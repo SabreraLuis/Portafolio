@@ -19,5 +19,11 @@
     "Physical Safari/iPhone and Android not tested",
     "Public CDN HTTP and Core Web Vitals not independently verified"
   ],
-  "rollback": "criterio-v7-12"
+  "rollback": "criterio-v7-12",
+  "font_variants": [
+    "native_fallback",
+    "wide_sans_fallback"
+  ],
+  "visual_cases": 26,
+  "ci_remediation": "Adjusted display type scale after real GitHub runner found wide fallback clipping; browser contract now covers both font cases."
 }
