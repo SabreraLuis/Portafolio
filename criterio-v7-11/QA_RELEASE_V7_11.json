@@ -1,0 +1,21 @@
+{
+  "version": "7.11",
+  "status": "local_quality_passed",
+  "scene_count": 24,
+  "automatic_default": "on_except_reduced_motion",
+  "scene_impact_cooldown_ms": 6500,
+  "scene_burst_class_lifetime_ms": 1850,
+  "loop_tick_ms": 1100,
+  "local_browser": {
+    "390": "cycle 1 to cycle 2",
+    "1440": "cycle 1 to cycle 2",
+    "errors": 0,
+    "overflow": 0,
+    "pause_and_resume": "pass",
+    "prefers_reduced_motion": "pass"
+  },
+  "limitations": [
+    "No physical Safari/iOS or Android device test",
+    "No public Core Web Vitals field data"
+  ]
+}

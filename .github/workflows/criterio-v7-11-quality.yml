@@ -1,0 +1,46 @@
+name: CRITERIO V7.11 — Continuous Signal QA
+on:
+  push:
+    paths:
+      - 'criterio-v7-11/**'
+      - '.github/workflows/criterio-v7-11-quality.yml'
+  pull_request:
+    paths:
+      - 'criterio-v7-11/**'
+      - '.github/workflows/criterio-v7-11-quality.yml'
+permissions:
+  contents: read
+jobs:
+  browser-quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Static integrity
+        run: |
+          node --check criterio-v7-11/app.js
+          python criterio-v7-11/qa/static_checks.py
+          python criterio-v7-11/qa/resource_budget.py
+      - name: Chromium test runtime
+        run: |
+          python -m pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Marketing, motion and continuous loop tests
+        run: |
+          python criterio-v7-11/qa/marketing_positioning.py
+          python criterio-v7-11/qa/signal_cut.py
+          python criterio-v7-11/qa/global_scene_quality.py
+          python criterio-v7-11/qa/living_loops.py
+      - name: Navigation and dossier regressions
+        run: |
+          python criterio-v7-11/qa/browser_smoke.py
+          python criterio-v7-11/qa/navigation_quality.py
+          python criterio-v7-11/qa/dossier_motion.py
+          python criterio-v7-11/qa/cinematic_bridges.py
+          python criterio-v7-11/qa/production_gate.py
