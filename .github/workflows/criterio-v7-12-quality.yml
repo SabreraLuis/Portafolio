@@ -1,0 +1,43 @@
+name: CRITERIO V7.12 — Editorial Depth QA
+on:
+  push:
+    paths:
+      - 'criterio-v7-12/**'
+      - '.github/workflows/criterio-v7-12-quality.yml'
+  pull_request:
+    paths:
+      - 'criterio-v7-12/**'
+      - '.github/workflows/criterio-v7-12-quality.yml'
+permissions:
+  contents: read
+jobs:
+  browser-quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Static integrity and budget
+        run: |
+          node --check criterio-v7-12/app.js
+          python criterio-v7-12/qa/static_checks.py
+          python criterio-v7-12/qa/resource_budget.py
+      - name: Install browser
+        run: |
+          python -m pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Portfolio content and depth QA
+        run: |
+          python criterio-v7-12/qa/marketing_positioning.py
+          python criterio-v7-12/qa/global_scene_quality.py
+          python criterio-v7-12/qa/editorial_depth.py
+      - name: Regression checks
+        run: |
+          python criterio-v7-12/qa/browser_smoke.py
+          python criterio-v7-12/qa/navigation_quality.py
+          python criterio-v7-12/qa/production_gate.py

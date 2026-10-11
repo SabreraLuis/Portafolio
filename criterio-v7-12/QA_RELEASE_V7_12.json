@@ -1,0 +1,32 @@
+{
+  "version": "7.12",
+  "status": "qa_local_passed_publication_pending",
+  "product": "CRITERIO - Marketing, Publicidad y Comunicación",
+  "benchmarks": [
+    "NNGroup",
+    "Webflow",
+    "Framer",
+    "Adobe",
+    "web.dev",
+    "MDN"
+  ],
+  "features": [
+    "Recruiter quick brief with three verified specialties",
+    "Native smooth anchor scroll",
+    "Decorative-only parallax 17/39px maximum",
+    "Motion enabled by default except reduced-motion, manual pause",
+    "Existing V7.11 loop FX preserved"
+  ],
+  "local_qa": {
+    "responsive_widths": 10,
+    "additional_depth_checks": 12,
+    "detected_js_errors": 0,
+    "smoke_pass": true,
+    "navigation_pass": true
+  },
+  "limits": [
+    "Chromium with fallback fonts, no physical iOS/Android",
+    "No public-CDN or field Core Web Vitals data yet"
+  ],
+  "rollback": "https://sabreraluis.github.io/Portafolio/criterio-v7-11/"
+}
