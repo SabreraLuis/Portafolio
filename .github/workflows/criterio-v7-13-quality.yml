@@ -1,0 +1,46 @@
+name: CRITERIO V7.13 — Editorial Quality
+on:
+  push:
+    paths:
+      - 'criterio-v7-13/**'
+      - '.github/workflows/criterio-v7-13-quality.yml'
+  pull_request:
+    paths:
+      - 'criterio-v7-13/**'
+      - '.github/workflows/criterio-v7-13-quality.yml'
+permissions:
+  contents: read
+jobs:
+  editorial-quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Static structure, asset budget and JS syntax
+        run: |
+          node --check criterio-v7-13/app.js
+          python criterio-v7-13/qa/static_checks.py
+          python criterio-v7-13/qa/resource_budget.py
+      - name: Install browser
+        run: |
+          python -m pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Editorial typography, spacing and copy quality
+        run: |
+          python criterio-v7-13/qa/editorial_contract.py
+          python criterio-v7-13/qa/marketing_positioning.py
+          python criterio-v7-13/qa/editorial_depth.py
+      - name: Navigation and runtime regression
+        run: |
+          python criterio-v7-13/qa/browser_smoke.py
+          python criterio-v7-13/qa/navigation_quality.py
+          python criterio-v7-13/qa/dossier_motion.py
+          python criterio-v7-13/qa/cinematic_bridges.py
+          python criterio-v7-13/qa/production_gate.py
+          python criterio-v7-13/qa/global_scene_quality.py

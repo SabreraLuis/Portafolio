@@ -1,0 +1,121 @@
+{
+  "widths": [
+    {
+      "width": 320,
+      "page_width": 320,
+      "bad": [],
+      "hud": "none",
+      "brief": 3,
+      "nav": 5
+    },
+    {
+      "width": 360,
+      "page_width": 360,
+      "bad": [],
+      "hud": "none",
+      "brief": 3,
+      "nav": 5
+    },
+    {
+      "width": 375,
+      "page_width": 375,
+      "bad": [],
+      "hud": "none",
+      "brief": 3,
+      "nav": 5
+    },
+    {
+      "width": 390,
+      "page_width": 390,
+      "bad": [],
+      "hud": "none",
+      "brief": 3,
+      "nav": 5
+    },
+    {
+      "width": 430,
+      "page_width": 430,
+      "bad": [],
+      "hud": "none",
+      "brief": 3,
+      "nav": 5
+    },
+    {
+      "width": 600,
+      "page_width": 600,
+      "bad": [],
+      "hud": "none",
+      "brief": 3,
+      "nav": 5
+    },
+    {
+      "width": 700,
+      "page_width": 700,
+      "bad": [],
+      "hud": "none",
+      "brief": 3,
+      "nav": 5
+    },
+    {
+      "width": 768,
+      "page_width": 768,
+      "bad": [],
+      "hud": "none",
+      "brief": 3,
+      "nav": 5
+    },
+    {
+      "width": 900,
+      "page_width": 900,
+      "bad": [],
+      "hud": "none",
+      "brief": 3,
+      "nav": 5
+    },
+    {
+      "width": 1024,
+      "page_width": 1024,
+      "bad": [],
+      "hud": "none",
+      "brief": 3,
+      "nav": 5
+    },
+    {
+      "width": 1280,
+      "page_width": 1280,
+      "bad": [],
+      "hud": "none",
+      "brief": 3,
+      "nav": 5
+    },
+    {
+      "width": 1440,
+      "page_width": 1440,
+      "bad": [],
+      "hud": "none",
+      "brief": 3,
+      "nav": 5
+    },
+    {
+      "width": 1920,
+      "page_width": 1920,
+      "bad": [],
+      "hud": "none",
+      "brief": 3,
+      "nav": 5
+    }
+  ],
+  "checks": {
+    "no_horizontal_overflow": true,
+    "no_text_box_clipping": true,
+    "no_floating_hud_occlusion": true,
+    "all_three_professional_pillars": true,
+    "five_navigation_chapters": true,
+    "copy_realistic": true,
+    "hero_marketing_not_ux": true,
+    "no_font_based_clipping": true,
+    "vfx_pause_preserved": true,
+    "no_page_errors": true
+  },
+  "console_errors": []
+}
