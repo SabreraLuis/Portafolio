@@ -44,3 +44,5 @@ jobs:
           python criterio-v7-13/qa/cinematic_bridges.py
           python criterio-v7-13/qa/production_gate.py
           python criterio-v7-13/qa/global_scene_quality.py
+          python criterio-v7-13/qa/signal_cut.py
+          python criterio-v7-13/qa/living_loops.py
