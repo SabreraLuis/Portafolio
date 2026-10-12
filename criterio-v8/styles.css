@@ -62,3 +62,6 @@ html.tab-hidden *,html.tab-hidden *::before,html.tab-hidden *::after{animation-p
  .method-steps h3{font-size:clamp(20px,4.8vw,29px);overflow-wrap:anywhere}
 }
 @media(max-width:390px){.method-head h2{font-size:clamp(42px,11.5vw,48px)}.method-steps h3{font-size:20px}}
+
+/* Preserve the hero headline with wider fallback display fonts on 320–375px devices. */
+@media(max-width:375px){.display-hero{font-size:clamp(49px,12.8vw,58px)}}
