@@ -36,3 +36,19 @@ html.tab-hidden *,html.tab-hidden *::before,html.tab-hidden *::after{animation-p
 /* Reduced-motion users may explicitly opt into FX using the site control. */
 @media(prefers-reduced-motion:reduce){html[data-motion='on'] .hero-orbit{animation:orbitSpin 20s linear infinite!important}html[data-motion='on'] .hero-cross{animation:crossFloat 7s ease-in-out infinite alternate!important}html[data-motion='on'] .hero-disruption{animation:signalFlicker 8s steps(1,end) infinite!important}}
 @media(max-width:1110px){html:not(.has-js) .topbar{flex-wrap:wrap}html:not(.has-js) .nav{display:flex;position:static;box-shadow:none;max-height:none;width:100%;order:3;flex-direction:column;align-items:flex-start;padding:10px 0}}
+/* Font-independent narrow viewport containment: actual GitHub runner Chromium fonts are wider than local. */
+@media(max-width:760px){
+ .pillars-grid{grid-template-columns:minmax(0,1fr)}
+ .pillars-title,.pillar{min-width:0;max-width:100%}
+ .pillars-title h2{font-size:clamp(41px,10.8vw,60px);overflow-wrap:break-word}
+ .pillar h3{font-size:clamp(30px,8.8vw,43px);overflow-wrap:anywhere}
+ .method-steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .method-steps h3{font-size:clamp(21px,4.9vw,29px);overflow-wrap:anywhere}
+ .contact h2{font-size:clamp(43px,10.4vw,81px);overflow-wrap:break-word}
+}
+@media(max-width:390px){
+ .pillars-title h2{font-size:clamp(39px,10vw,45px)}
+ .pillar h3{font-size:clamp(30px,8.3vw,36px)}
+ .method-steps h3{font-size:22px}
+ .contact h2{font-size:clamp(41px,10.4vw,47px)}
+}
