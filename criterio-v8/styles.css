@@ -65,3 +65,6 @@ html.tab-hidden *,html.tab-hidden *::before,html.tab-hidden *::after{animation-p
 
 /* Preserve the hero headline with wider fallback display fonts on 320–375px devices. */
 @media(max-width:375px){.display-hero{font-size:clamp(49px,12.8vw,58px)}}
+
+/* Verified CI finding: the overview title's last forced line was 1.3px wider at 320px. */
+@media(max-width:375px){.overview-statement h2{font-size:clamp(43px,11.2vw,46px)}}
