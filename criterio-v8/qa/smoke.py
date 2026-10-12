@@ -26,7 +26,7 @@ with sync_playwright() as p:
    r['suspects']=page.evaluate("""() => [...document.querySelectorAll('body *')].filter(el=>{
      const b=el.getBoundingClientRect(); if(b.right<=innerWidth+.15)return false;
      let p=el.parentElement; while(p&&p!==document.body){let o=getComputedStyle(p).overflowX;if(o==='hidden'||o==='clip')return false;p=p.parentElement}return true;
-   }).slice(0,18).map(el=>({tag:el.tagName,cls:String(el.className).slice(0,60),text:el.textContent.trim().slice(0,35),right:Math.round(el.getBoundingClientRect().right*10)/10,scrollWidth:el.scrollWidth}))""")
+   }).slice(0,18).map(el=>({tag:el.tagName,cls:String(el.className).slice(0,60),text:el.textContent.trim().slice(0,35),right:Math.round(el.getBoundingClientRect().right*10)/10,scrollWidth:el.scrollWidth,parent:el.parentElement?.className,parentText:el.parentElement?.textContent.trim().slice(0,90)}))""")
   res['widths'].append({'width':w,**r,'jsErrors':errors})
   if w in [390,1440]:
    page.screenshot(path=str(root/'previews'/f'v8-hero-{w}.png'),full_page=False)
