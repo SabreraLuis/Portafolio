@@ -22,6 +22,11 @@ with sync_playwright() as p:
   page.set_content(h,wait_until='domcontentloaded')
   page.wait_for_timeout(950)
   r=page.evaluate('''() => {let ww=innerWidth; let els=[...document.querySelectorAll('h1,h2,h3,.btn,.case-cta,.brand-copy,.contact-phone,.contact-pdf')]; let bad=els.filter(el=>{let r=el.getBoundingClientRect();return r.right>ww+2||r.left < -2|| (el.scrollWidth>el.clientWidth+3 && getComputedStyle(el).overflowX!=='visible')});return {overflow:Math.max(0,document.documentElement.scrollWidth-ww,document.body.scrollWidth-ww),bad:bad.map(el=>({tag:el.tagName,className:el.className,txt:el.textContent.trim().slice(0,35),scrollWidth:el.scrollWidth,clientWidth:el.clientWidth,rect:[Math.round(el.getBoundingClientRect().left),Math.round(el.getBoundingClientRect().right)]})).slice(0,12)};}''')
+  if r['overflow']:
+   r['suspects']=page.evaluate("""() => [...document.querySelectorAll('body *')].filter(el=>{
+     const b=el.getBoundingClientRect(); if(b.right<=innerWidth+.15)return false;
+     let p=el.parentElement; while(p&&p!==document.body){let o=getComputedStyle(p).overflowX;if(o==='hidden'||o==='clip')return false;p=p.parentElement}return true;
+   }).slice(0,18).map(el=>({tag:el.tagName,cls:String(el.className).slice(0,60),text:el.textContent.trim().slice(0,35),right:Math.round(el.getBoundingClientRect().right*10)/10,scrollWidth:el.scrollWidth}))""")
   res['widths'].append({'width':w,**r,'jsErrors':errors})
   if w in [390,1440]:
    page.screenshot(path=str(root/'previews'/f'v8-hero-{w}.png'),full_page=False)
