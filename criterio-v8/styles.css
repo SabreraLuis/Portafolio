@@ -52,3 +52,13 @@ html.tab-hidden *,html.tab-hidden *::before,html.tab-hidden *::after{animation-p
  .method-steps h3{font-size:22px}
  .contact h2{font-size:clamp(41px,10.4vw,47px)}
 }
+
+/* Narrow-width method grid: no intrinsic min-content expansion under wide fallback fonts. */
+@media(max-width:760px){
+ .method-layout{grid-template-columns:minmax(0,1fr);min-width:0}
+ .method-head,.method-steps{min-width:0}
+ .method-head h2{font-size:clamp(48px,10.8vw,76px);overflow-wrap:break-word}
+ .method-steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .method-steps h3{font-size:clamp(20px,4.8vw,29px);overflow-wrap:anywhere}
+}
+@media(max-width:390px){.method-head h2{font-size:clamp(42px,11.5vw,48px)}.method-steps h3{font-size:20px}}
