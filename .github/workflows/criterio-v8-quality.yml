@@ -1,0 +1,32 @@
+name: CRITERIO V8 quality
+on:
+  push:
+    paths:
+      - 'criterio-v8/**'
+      - '.github/workflows/criterio-v8-quality.yml'
+  pull_request:
+    paths:
+      - 'criterio-v8/**'
+      - '.github/workflows/criterio-v8-quality.yml'
+permissions:
+  contents: read
+jobs:
+  browser-quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: JavaScript syntax
+        run: node --check criterio-v8/app.js
+      - name: Install Chromium runtime
+        run: |
+          python -m pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Chromium responsive and interaction smoke
+        run: python criterio-v8/qa/smoke.py

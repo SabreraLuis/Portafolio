@@ -1,0 +1,99 @@
+{
+  "widths": [
+    {
+      "width": 320,
+      "overflow": 0,
+      "bad": [],
+      "jsErrors": []
+    },
+    {
+      "width": 360,
+      "overflow": 0,
+      "bad": [],
+      "jsErrors": []
+    },
+    {
+      "width": 375,
+      "overflow": 0,
+      "bad": [],
+      "jsErrors": []
+    },
+    {
+      "width": 390,
+      "overflow": 0,
+      "bad": [],
+      "jsErrors": []
+    },
+    {
+      "width": 430,
+      "overflow": 0,
+      "bad": [],
+      "jsErrors": []
+    },
+    {
+      "width": 600,
+      "overflow": 0,
+      "bad": [],
+      "jsErrors": []
+    },
+    {
+      "width": 768,
+      "overflow": 0,
+      "bad": [],
+      "jsErrors": []
+    },
+    {
+      "width": 900,
+      "overflow": 0,
+      "bad": [],
+      "jsErrors": []
+    },
+    {
+      "width": 1024,
+      "overflow": 0,
+      "bad": [],
+      "jsErrors": []
+    },
+    {
+      "width": 1110,
+      "overflow": 0,
+      "bad": [],
+      "jsErrors": []
+    },
+    {
+      "width": 1280,
+      "overflow": 0,
+      "bad": [],
+      "jsErrors": []
+    },
+    {
+      "width": 1440,
+      "overflow": 0,
+      "bad": [],
+      "jsErrors": []
+    },
+    {
+      "width": 1920,
+      "overflow": 0,
+      "bad": [],
+      "jsErrors": []
+    }
+  ],
+  "interactions": {
+    "motion_default_on": true,
+    "pdf_local": true,
+    "menu_hidden": true,
+    "menu_opens": true,
+    "menu_aria": true,
+    "menu_escape": true,
+    "motion_pauses": true,
+    "motion_reactivates": true,
+    "case_visible": true,
+    "active_navigation": true,
+    "reduced_default_off": true,
+    "reduced_explicit_optin": true,
+    "no_js_content": true,
+    "no_js_mobile_nav": true
+  },
+  "errors": []
+}
